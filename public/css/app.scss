@@ -1,0 +1,55 @@
+$font: "source-sans-pro","Helvetica Neue", Helvetica,Arial,sans-serif;
+
+html{
+  font-family: $font;
+}
+body{
+  width: 100%;
+  min-width: 320px;
+}
+header.header {
+  margin: 0;
+  height: 55px;
+  width:100%;
+  background-color: #282828;
+  h4{
+    margin: 0;
+    color: #fff;
+    padding: 17px;
+  }
+  .btn, span{
+    margin-right: 35px;
+    padding: 6px 16px;
+  }
+  span.glyphicon{
+    margin-right: 0;
+    padding: 2px 12px;
+    font-size: 12px;
+  }
+  .header-right-part{
+    padding: 11px;
+    a{
+      color: #cbcbcb
+    }
+    a:hover{
+      text-decoration: none;
+      text-underline: none;
+      border: none;
+      color: #fff;
+    }
+    a:focus, a:active{
+      text-decoration: none;
+      text-underline: none;
+      border: none;
+      outline: 0;
+    }
+  }
+  .header-left-part{
+    white-space: nowrap;
+    color: #cbcbcb;
+  }
+  .mobile .glyphicon{
+    padding: 5px 20px;
+    font-size: 20px;
+  }
+}

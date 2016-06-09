@@ -1,8 +1,45 @@
-/* app css stylesheet */
+html {
+  font-family: "source-sans-pro", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 body {
-  padding-top:70px;
-}
+  width: 100%;
+  min-width: 320px; }
 
+header.header {
+  margin: 0;
+  height: 55px;
+  width: 100%;
+  background-color: #282828; }
+  header.header h4 {
+    margin: 0;
+    color: #fff;
+    padding: 17px; }
+  header.header .btn, header.header span {
+    margin-right: 35px;
+    padding: 6px 16px; }
+  header.header span.glyphicon {
+    margin-right: 0;
+    padding: 2px 12px;
+    font-size: 12px; }
+  header.header .header-right-part {
+    padding: 11px; }
+    header.header .header-right-part a {
+      color: #cbcbcb; }
+    header.header .header-right-part a:hover {
+      text-decoration: none;
+      text-underline: none;
+      border: none;
+      color: #fff; }
+    header.header .header-right-part a:focus, header.header .header-right-part a:active {
+      text-decoration: none;
+      text-underline: none;
+      border: none;
+      outline: 0; }
+  header.header .header-left-part {
+    white-space: nowrap;
+    color: #cbcbcb; }
+  header.header .mobile .glyphicon {
+    padding: 5px 20px;
+    font-size: 20px; }
 
-  
+/*# sourceMappingURL=app.css.map */
