@@ -7,6 +7,21 @@ body{
   width: 100%;
   min-width: 320px;
 }
+.no-padding{
+  padding: 0;
+}
+.no-margin{
+  margin: 0;
+}
+.no-decoration{
+    text-decoration: none;
+    text-underline: none;
+    border: none;
+}
+.pointer{
+  cursor: pointer;
+}
+/*** Landing Header ***/
 header.header {
   margin: 0;
   height: 55px;
@@ -51,5 +66,48 @@ header.header {
   .mobile .glyphicon{
     padding: 5px 20px;
     font-size: 20px;
+  }
+}
+/***landing head***/
+div.top-header {
+  li, span {color: #9d9d9d;}
+  .container>div {
+    padding: 20px 0;
+  }
+  .lang-changer {
+    min-width: 100px;
+    .dropdown-menu {
+      padding: 0;
+      left: -100px;
+      top: 30px;
+      li a{
+        padding: 8px 10px;
+        font-size: 13px;
+      }
+    }
+    a:hover, a:focus{
+      @extend .no-decoration;
+    }
+    .dropdown a{
+      color: #9d9d9d;
+    }
+    .dropdown-menu {
+      li a {
+        transition-property: background;
+        transition-duration: 1s;
+        transition-timing-function: linear;
+      }
+      li a:hover{
+        background-color: #f7c51d;
+      }
+    }
+  }
+  .author-email {
+    transition-property: color;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+  }
+  .author-email:hover {
+    color: #000;
   }
 }

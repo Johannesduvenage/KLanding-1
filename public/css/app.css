@@ -5,6 +5,21 @@ body {
   width: 100%;
   min-width: 320px; }
 
+.no-padding {
+  padding: 0; }
+
+.no-margin {
+  margin: 0; }
+
+.no-decoration, div.top-header .lang-changer a:hover, div.top-header .lang-changer a:focus {
+  text-decoration: none;
+  text-underline: none;
+  border: none; }
+
+.pointer {
+  cursor: pointer; }
+
+/*** Landing Header ***/
 header.header {
   margin: 0;
   height: 55px;
@@ -41,5 +56,34 @@ header.header {
   header.header .mobile .glyphicon {
     padding: 5px 20px;
     font-size: 20px; }
+
+/***landing head***/
+div.top-header li, div.top-header span {
+  color: #9d9d9d; }
+div.top-header .container > div {
+  padding: 20px 0; }
+div.top-header .lang-changer {
+  min-width: 100px; }
+  div.top-header .lang-changer .dropdown-menu {
+    padding: 0;
+    left: -100px;
+    top: 30px; }
+    div.top-header .lang-changer .dropdown-menu li a {
+      padding: 8px 10px;
+      font-size: 13px; }
+  div.top-header .lang-changer .dropdown a {
+    color: #9d9d9d; }
+  div.top-header .lang-changer .dropdown-menu li a {
+    transition-property: background;
+    transition-duration: 1s;
+    transition-timing-function: linear; }
+  div.top-header .lang-changer .dropdown-menu li a:hover {
+    background-color: #f7c51d; }
+div.top-header .author-email {
+  transition-property: color;
+  transition-duration: 1s;
+  transition-timing-function: linear; }
+div.top-header .author-email:hover {
+  color: #000; }
 
 /*# sourceMappingURL=app.css.map */

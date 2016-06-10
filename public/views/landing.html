@@ -27,3 +27,32 @@
         </div>
     </div>
 </header>
+<div class="top-header container-fluid">
+    <div class="container">
+        <div class="col-xs-6">
+            <span>This template created by Kiskin Vladislav</span>
+        </div>
+        <div class="col-xs-6 row">
+            <ul class="list-inline pull-right">
+                <li>
+                    <span>Email us:</span><span class="author-email pointer"> kiskinvlad@gmail.com</span>
+                </li>
+                <li class="lang-changer pull-right">
+                    <div ng-controller="MultiLangCtrl" class="pull-right">
+                       <span uib-dropdown on-toggle="toggled(open)">
+                          <a href id="simple-dropdown" uib-dropdown-toggle>
+                              {{currentSelect}}
+                              <i class="fa fa-angle-down" aria-hidden="true"></i>
+                          </a>
+                          <ul class="dropdown-menu" uib-dropdown-menu aria-labelledby="simple-dropdown">
+                              <li ng-repeat="choice in langs">
+                                  <a href ng-click="setChoice(choice.lang)">{{choice.lang}}</a>
+                              </li>
+                          </ul>
+                        </span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
