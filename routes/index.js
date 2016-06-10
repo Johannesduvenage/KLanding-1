@@ -4,7 +4,7 @@
  */
 
 exports.index = function(req, res){
-  res.render('index');
+  res.render('landing',  { title: 'ejs' });
 };
 
 exports.partial = function (req, res) {
