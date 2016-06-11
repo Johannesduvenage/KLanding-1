@@ -13,8 +13,20 @@
     </div>
 
     <!--***Mobile header -->
-    <div class="header-left-part col-xs-6 hidden-sm hidden-md hidden-lg">
-        <h4> ⚇ Made by Kiskin </h4>
+    <div class="header-left-part col-xs-6 hidden-sm hidden-md hidden-lg mobile">
+        <div ng-controller="MultiLangCtrl">
+            <span uib-dropdown on-toggle="toggled(open)">
+                <a href id="simple-dropdown" uib-dropdown-toggle>
+                    {{curShortSelect}}
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                </a>
+                <ul class="dropdown-menu" uib-dropdown-menu aria-labelledby="simple-dropdown">
+                    <li ng-repeat="choice in langs">
+                        <a href ng-click="setChoice(choice.short)">{{choice.short}}</a>
+                    </li>
+                </ul>
+            </span>
+        </div>
     </div>
     <div class="header-right-part col-xs-6 hidden-sm hidden-md hidden-lg mobile">
         <div class="pull-right">
@@ -27,32 +39,70 @@
         </div>
     </div>
 </header>
-<div class="top-header container-fluid">
+<div class="head container-fluid">
     <div class="container">
-        <div class="col-xs-6">
-            <span>This template created by Kiskin Vladislav</span>
+        <div class="top-header">
+            <div class="col-sm-6 col-xs-4">
+                <span>This template created by Kiskin Vladislav</span>
+            </div>
+            <div class="col-sm-6 col-xs-8">
+                <ul class="list-inline pull-right">
+                    <li>
+                        <span>Email us:</span><span class="author-email pointer"> kiskinvlad@gmail.com</span>
+                    </li>
+                    <li class="lang-changer pull-right hidden-xs">
+                        <div ng-controller="MultiLangCtrl" class="pull-right">
+                           <span uib-dropdown on-toggle="toggled(open)">
+                              <a href id="simple-dropdown" uib-dropdown-toggle>
+                                  {{currentSelect}}
+                                  <i class="fa fa-angle-down" aria-hidden="true"></i>
+                              </a>
+                              <ul class="dropdown-menu" uib-dropdown-menu aria-labelledby="simple-dropdown">
+                                  <li ng-repeat="choice in langs">
+                                      <a href ng-click="setChoice(choice.lang)">{{choice.lang}}</a>
+                                  </li>
+                              </ul>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="col-xs-6 row">
-            <ul class="list-inline pull-right">
-                <li>
-                    <span>Email us:</span><span class="author-email pointer"> kiskinvlad@gmail.com</span>
-                </li>
-                <li class="lang-changer pull-right">
-                    <div ng-controller="MultiLangCtrl" class="pull-right">
-                       <span uib-dropdown on-toggle="toggled(open)">
-                          <a href id="simple-dropdown" uib-dropdown-toggle>
-                              {{currentSelect}}
-                              <i class="fa fa-angle-down" aria-hidden="true"></i>
-                          </a>
-                          <ul class="dropdown-menu" uib-dropdown-menu aria-labelledby="simple-dropdown">
-                              <li ng-repeat="choice in langs">
-                                  <a href ng-click="setChoice(choice.lang)">{{choice.lang}}</a>
-                              </li>
-                          </ul>
-                        </span>
+        <div class="col-xs-12 middle-header">
+            <div class="col-md-4 col-xs-12">
+                <div class="inline">
+                     <div class="land-ico"></div>
+                </div>
+                <div class="inline ico-info">
+                    <h3>K-Landing #1</h3>
+                    <span>Klanding template</span>
+                </div>
+            </div>
+            <div class="col-md-2 col-xs-4">
+                <div class="inline ico-info">
+                    <h4>Landing page #1</h4>
+                    <span>created by Kiskin</span>
+                </div>
+            </div>
+            <div class="col-md-2 col-xs-4">
+                <div class="inline ico-info">
+                    <h4>Global Certificate</h4>
+                    <span>ISO 9001:2015</span>
+                </div>
+            </div>
+            <div class="col-md-2 col-xs-4">
+                <div class="inline ico-info">
+                    <h4>Award Winning</h4>
+                    <span>Solution Of The Year</span>
+                </div>
+            </div>
+            <div class="col-md-2 col-xs-12">
+                <a href>
+                    <div class="inline push-me">
+                        PUSH ME
                     </div>
-                </li>
-            </ul>
+                </a>
+            </div>
         </div>
     </div>
 </div>

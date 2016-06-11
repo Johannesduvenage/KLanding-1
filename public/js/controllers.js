@@ -13,11 +13,12 @@ function AppCtrl($scope, $http) {
 }
 function MultiLangCtrl($scope, $log) {
     $scope.langs = [
-        {id: 0, lang: 'English'},
-        {id: 1, lang: 'Ukraine'},
-        {id: 2, lang: 'Russian'}
+        {id: 0, lang: 'English', short: 'ENG'},
+        {id: 1, lang: 'Ukraine', short: 'UK'},
+        {id: 2, lang: 'Russian', short: 'RU'}
     ];
     $scope.currentSelect = $scope.langs[0].lang;
+    $scope.curShortSelect = $scope.langs[0].short;
     $scope.status = {
         isopen: false
     };
@@ -26,7 +27,7 @@ function MultiLangCtrl($scope, $log) {
         $log.log('Dropdown is now: ', open);
     };
     $scope.setChoice = function(choice) {
-        $scope.currentSelect = choice;
+        $scope.curShortSelect = $scope.currentSelect = choice;
     };
 
     $scope.toggleDropdown = function($event) {
