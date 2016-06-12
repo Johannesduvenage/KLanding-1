@@ -106,3 +106,16 @@
         </div>
     </div>
 </div>
+<div class="landing-carousel">
+    <div ng-controller="LandingCarouselCtrl">
+        <div>
+            <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides" template-url="views/templates/carouselTemplate.html">
+                <uib-slide class="landing-slide" ng-repeat="slide in slides track by slide.id" index="slide.id">
+                    <div  ng-style="{'background-image':'url({{slide.image[slide.id]}})'}" style="margin:auto;"></div>
+                    <div class="carousel-caption">
+                    </div>
+                </uib-slide>
+            </uib-carousel>
+        </div>
+    </div>
+</div>

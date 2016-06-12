@@ -181,3 +181,41 @@ div.head {
     background-color: #000;
   }
 }
+/*** Landing Carousel ***/
+.landing-carousel{
+  margin-top: 40px;
+  height: 500px;
+  width:100%;
+  background-color: #000;
+  .landing-slide *{
+    opacity: 0.5;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+  }
+  .carousel-control{
+    opacity: 1!important;
+    height: 60px;
+    width: 30px;
+    background-color: rgba(63, 63, 59, 0.3);
+    background-image: none;
+    transition-property: background;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    top: 200px;
+    margin: 0 20px;
+  }
+  a.carousel-control:hover{
+    background-color: #f7c51d;
+  }
+  i{
+    color: #fff;
+    margin-top: 20px;
+  }
+  .fa-chevron-right{
+    margin-right: -3px;
+  }
+  .fa-chevron-left{
+    margin-left: -3px;
+  }
+}

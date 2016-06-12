@@ -1,6 +1,9 @@
 'use strict';
 
 /* Controllers */
+var controllers = angular.module('myApp', ['ui.bootstrap','ngAnimate']).controller('MultiLangCtrl', MultiLangCtrl)
+                                         .controller('LandingCarouselCtrl', LandingCarouselCtrl);
+
 
 function AppCtrl($scope, $http) {
   $http({method: 'GET', url: '/api/name'}).
@@ -38,8 +41,63 @@ function MultiLangCtrl($scope, $log) {
 
     $scope.appendToEl = angular.element(document.querySelector('#dropdown-long-content'));
 }
-MultiLangCtrl.$inject = ['$scope', '$log'];
-angular.module('myApp', ['ui.bootstrap']).controller('MultiLangCtrl', MultiLangCtrl);
+function LandingCarouselCtrl($scope, $animate){
+    $animate.enabled(true);
+    $scope.myInterval = 0;
+    $scope.noWrapSlides = false;
+    $scope.active = 0;
+    var slides = $scope.slides = [];
+    var currIndex = 0;
+
+    $scope.addSlide = function() {
+        slides.push({
+            image: ['assets/IT-1.jpg','assets/IT-2.jpg','assets/IT-3.jpg'],
+            text: ['Nice image','Awesome photograph','That is so cool','I love that'][slides.length % 3],
+            id: currIndex++
+        });
+    };
+
+    $scope.randomize = function() {
+        var indexes = generateIndexesArray();
+        assignNewIndexesToSlides(indexes);
+    };
+
+    for (var i = 0; i < 3; i++) {
+        $scope.addSlide();
+    }
+
+    // Randomize logic below
+
+    function assignNewIndexesToSlides(indexes) {
+        for (var i = 0, l = slides.length; i < l; i++) {
+            slides[i].id = indexes.pop();
+        }
+    }
+
+    function generateIndexesArray() {
+        var indexes = [];
+        for (var i = 0; i < currIndex; ++i) {
+            indexes[i] = i;
+        }
+        return shuffle(indexes);
+    }
+
+    // http://stackoverflow.com/questions/962802#962890
+    function shuffle(array) {
+        var tmp, current, top = array.length;
+
+        if (top) {
+            while (--top) {
+                current = Math.floor(Math.random() * (top + 1));
+                tmp = array[current];
+                array[current] = array[top];
+                array[top] = tmp;
+            }
+        }
+
+        return array;
+    }
+}
 
 function MyCtrl1() {}
 MyCtrl1.$inject = [];
