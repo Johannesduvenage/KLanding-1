@@ -107,7 +107,43 @@
     </div>
 </div>
 <div class="landing-carousel">
-    <div ng-controller="LandingCarouselCtrl">
+    <div class="landing-navbar">
+        <div class="container">
+            <div ng-controller="LandingNavbarCtrl">
+                <div class="navbar-home-ico col-md-1 col-xs-12">
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                </div>
+                <div class="col-md-10 hidden-sm">
+                    <div class="col-md-9 middle-tabs">
+                        <uib-tabset active="activeJustified" justified="true">
+                        <uib-tab index="0" heading="Home" template-url="views/templates/tabTemplate.html"></uib-tab>
+                        <uib-tab index="1" heading="Solution" template-url="views/templates/tabTemplate.html"></uib-tab>
+                        <uib-tab index="2" heading="Projects" template-url="views/templates/tabTemplate.html"></uib-tab>
+                        <uib-tab index="3" heading="Blog" template-url="views/templates/tabTemplate.html"></uib-tab>
+                        <uib-tab index="4" heading="Services" template-url="views/templates/tabTemplate.html"></uib-tab>
+                        <uib-tab index="5" heading="Shop" template-url="views/templates/tabTemplate.html"></uib-tab>
+                        <uib-tab index="6" heading="About" template-url="views/templates/tabTemplate.html"></uib-tab>
+                        <uib-tab index="7" heading="Contact" template-url="views/templates/tabTemplate.html"></uib-tab>
+                        </uib-tabset>
+                    </div>
+                    <div class="col-md-2 col-md-offset-1 col-xs-12 right-tabs">
+                        <div class="pull-right">
+                            <uib-tabset active="activeJustified" justified="true">
+                                <uib-tab index="8" heading="fa fa-twitter" template-url="views/templates/socialTabsTemplate.html"></uib-tab>
+                                <uib-tab index="9" heading="fa fa-facebook" template-url="views/templates/socialTabsTemplate.html"></uib-tab>
+                                <uib-tab index="10" heading="fa fa-gitlab" template-url="views/templates/socialTabsTemplate.html"></uib-tab>
+                                <uib-tab index="11" heading="fa fa-vk" template-url="views/templates/socialTabsTemplate.html"></uib-tab>
+                            </uib-tabset>
+                        </div>
+                    </div>
+                </div>
+                <div class="navbar-search-ico col-md-1">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ng-controller="LandingCarouselCtrl" class="carousel-main">
         <div>
             <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides" template-url="views/templates/carouselTemplate.html">
                 <uib-slide class="landing-slide" ng-repeat="slide in slides track by slide.id" index="slide.id">

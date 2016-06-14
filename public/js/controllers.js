@@ -1,8 +1,10 @@
 'use strict';
 
 /* Controllers */
-var controllers = angular.module('myApp', ['ui.bootstrap','ngAnimate']).controller('MultiLangCtrl', MultiLangCtrl)
-                                         .controller('LandingCarouselCtrl', LandingCarouselCtrl);
+var controllers = angular.module('myApp', ['ui.bootstrap','ngAnimate']);
+controllers.controller('MultiLangCtrl', MultiLangCtrl);
+controllers.controller('LandingCarouselCtrl', LandingCarouselCtrl);
+controllers.controller('LandingNavbarCtrl', LandingNavbarCtrl);
 
 
 function AppCtrl($scope, $http) {
@@ -98,7 +100,22 @@ function LandingCarouselCtrl($scope, $animate){
         return array;
     }
 }
+function LandingNavbarCtrl($scope, $window) {
+    $scope.tabs = [
+        { title:'Dynamic Title 1', content:'Dynamic content 1' },
+        { title:'Dynamic Title 2', content:'Dynamic content 2', disabled: true }
+    ];
 
+    $scope.alertMe = function() {
+        setTimeout(function() {
+            $window.alert('You\'ve selected the alert tab!');
+        });
+    };
+
+    $scope.model = {
+        name: 'Tabs'
+    };
+}
 function MyCtrl1() {}
 MyCtrl1.$inject = [];
 

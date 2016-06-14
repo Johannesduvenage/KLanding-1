@@ -139,10 +139,13 @@ div.head .push-me:hover {
 
 /*** Landing Carousel ***/
 .landing-carousel {
-  margin-top: 40px;
+  margin-top: 25px;
   height: 500px;
   width: 100%;
   background-color: #000; }
+  .landing-carousel .carousel-main {
+    top: -65px;
+    position: relative; }
   .landing-carousel .landing-slide * {
     opacity: 0.5;
     height: 500px;
@@ -150,8 +153,8 @@ div.head .push-me:hover {
     background-position: center; }
   .landing-carousel .carousel-control {
     opacity: 1 !important;
-    height: 60px;
-    width: 30px;
+    height: 80px;
+    width: 35px;
     background-color: rgba(63, 63, 59, 0.3);
     background-image: none;
     transition-property: background;
@@ -159,14 +162,85 @@ div.head .push-me:hover {
     transition-timing-function: linear;
     top: 200px;
     margin: 0 20px; }
+    .landing-carousel .carousel-control i {
+      color: #fff;
+      margin-top: 35px;
+      font-size: 14px; }
   .landing-carousel a.carousel-control:hover {
     background-color: #f7c51d; }
-  .landing-carousel i {
-    color: #fff;
-    margin-top: 20px; }
   .landing-carousel .fa-chevron-right {
     margin-right: -3px; }
   .landing-carousel .fa-chevron-left {
     margin-left: -3px; }
+
+/*** Landing navbar ***/
+div.landing-navbar {
+  position: relative;
+  z-index: 11;
+  border-bottom: 1px solid rgba(116, 116, 116, 0.5); }
+  div.landing-navbar .nav-tabs a {
+    border: none;
+    margin: 0;
+    font-size: 14px; }
+  div.landing-navbar div.middle-tabs .nav-tabs {
+    float: left; }
+  div.landing-navbar div.right-tabs .nav-tabs > li > a {
+    color: #fff;
+    font-weight: bold;
+    padding-left: 20px; }
+  div.landing-navbar div.right-tabs .nav-tabs > li > a:hover {
+    color: #f7c51d;
+    transition-property: color;
+    transition-duration: 1s;
+    transition-timing-function: linear; }
+  div.landing-navbar div.navbar-home-ico {
+    height: 30px;
+    border-right: 1px solid rgba(116, 116, 116, 0.5);
+    position: relative;
+    top: 20px;
+    text-align: left; }
+    div.landing-navbar div.navbar-home-ico i {
+      color: #fff;
+      font-size: 30px; }
+  div.landing-navbar div.navbar-search-ico {
+    height: 30px;
+    border-left: 1px solid rgba(116, 116, 116, 0.5);
+    position: relative;
+    top: 20px;
+    text-align: right; }
+    div.landing-navbar div.navbar-search-ico i {
+      color: #fff;
+      font-size: 20px; }
+  div.landing-navbar .tab-content {
+    display: none; }
+  div.landing-navbar .nav-tabs > li > a {
+    color: #fff;
+    font-weight: bold;
+    padding: 20px 0; }
+  div.landing-navbar .nav-tabs > li.active > a,
+  div.landing-navbar .nav-tabs > li.active > a:hover,
+  div.landing-navbar .nav-tabs > li > a:hover,
+  div.landing-navbar .nav-tabs > li > a:focus,
+  div.landing-navbar .nav-tabs > li.active > a:focus {
+    background: none;
+    border: none;
+    outline: none;
+    color: #fff; }
+  div.landing-navbar .nav-tabs > li > a:hover .tab-footer {
+    width: 50%;
+    opacity: 1; }
+  div.landing-navbar .nav-tabs > li.active > a .tab-footer {
+    opacity: 1; }
+  div.landing-navbar .tab-footer {
+    transition-property: all;
+    transition-duration: 0.6s;
+    transition-timing-function: linear;
+    width: 100%;
+    margin: 0 auto;
+    height: 4px;
+    background-color: #f7c51d;
+    position: relative;
+    top: 20px;
+    opacity: 0; }
 
 /*# sourceMappingURL=app.css.map */
