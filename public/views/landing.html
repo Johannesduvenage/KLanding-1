@@ -106,14 +106,56 @@
         </div>
     </div>
 </div>
+<div class="landing-navbar hidden-md hidden-lg" ng-controller="LandingNavbarCtrl">
+    <div class="container">
+        <div>
+            <div class="navbar-home-ico col-md-1 col-xs-10">
+                <i class="fa fa-home inline" aria-hidden="true"  ng-click="isCollapsed = !isCollapsed"></i>
+                <span class="search-input-mobile"><input placeholder="Enter your search term..."  /></span>
+            </div>
+            <div class="navbar-bars-ico col-md-1 col-xs-2 col-md-offset-0">
+                    <i class="fa fa-bars inline hidden-md hidden-lg" type="button" aria-hidden="true" ng-click="isCollapsed = !isCollapsed"></i>
+            </div>
+        </div>
+    </div>
+    <div uib-collapse="isCollapsed" class="mobile-nav-list">
+        <ul class="list-unstyled">
+            <li>
+                <div class="well well-lg"><a href>Home</a></div>
+            </li>
+            <li>
+                <div class="well well-lg"><a href>Solution</a></div>
+            </li>
+            <li>
+                <div class="well well-lg"><a href>Projects</a></div>
+            </li>
+            <li>
+                <div class="well well-lg"><a href>Blog</a></div>
+            </li>
+            <li>
+                <div class="well well-lg"><a href>Services</a></div>
+            </li>
+            <li>
+                <div class="well well-lg"><a href>Shop</a></div>
+            </li>
+            <li>
+                <div class="well well-lg"><a href>About</a></div>
+            </li>
+            <li>
+                <div class="well well-lg"><a href>Contact</a></div>
+            </li>
+        </ul>
+    </div>
+</div>
 <div class="landing-carousel">
-    <div class="landing-navbar">
+    <div class="landing-navbar hidden-sm hidden-xs">
         <div class="container">
             <div ng-controller="LandingNavbarCtrl">
-                <div class="navbar-home-ico col-md-1 col-xs-12">
-                    <i class="fa fa-home" aria-hidden="true"></i>
+                <div class="navbar-home-ico col-md-1 col-sm-2 col-xs-5">
+                    <i class="fa fa-home inline cursor" aria-hidden="true"></i>
+                    <i class="fa fa-bars inline hidden-md hidden-lg" aria-hidden="true"></i>
                 </div>
-                <div class="col-md-10 hidden-sm">
+                <div class="col-md-10 hidden-sm hidden-xs">
                     <div class="col-md-9 middle-tabs">
                         <uib-tabset active="activeJustified" justified="true">
                         <uib-tab index="0" heading="Home" template-url="views/templates/tabTemplate.html"></uib-tab>
@@ -137,8 +179,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="navbar-search-ico col-md-1">
-                    <i class="fa fa-search" aria-hidden="true"></i>
+                <div class="navbar-search-ico col-md-1 col-xs-6 col-xs-offset-1 col-sm-offset-4 col-md-offset-0">
+                    <i class="fa fa-search pointer" aria-hidden="true" ng-click="setVisibility()"></i>
+                    <span class="search-input"><input placeholder="Enter your search term..." ng-class="class" /></span>
                 </div>
             </div>
         </div>

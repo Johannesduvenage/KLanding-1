@@ -19,6 +19,9 @@ body{
     text-underline: none;
     border: none;
 }
+.cursor{
+  cursor: default;
+}
 .pointer{
   cursor: pointer;
 }
@@ -265,6 +268,9 @@ div.landing-navbar{
       color: #fff;
       font-size: 30px;
     }
+    i.fa-bars{
+      margin-left: 15px;
+    }
   }
   div.navbar-search-ico{
     height: 30px;
@@ -275,6 +281,14 @@ div.landing-navbar{
     i{
       color: #fff;
       font-size: 20px;
+    }
+  }
+  div.navbar-bars-ico{
+    height: 30px;
+    text-align: left;
+    i{
+      color: #fff;
+      font-size: 30px;
     }
   }
   .tab-content{
@@ -318,4 +332,35 @@ div.landing-navbar{
     top: 20px;
     opacity:0;
   }
+  span.search-input{
+    input{
+      visibility: hidden;
+      float: right;
+      position: relative;
+      top: 23px;
+      padding: 7px 25px;
+      border-radius: unset;
+      -webkit-transition: all .5s ease;
+      -moz-transition: all .5s ease;
+      transition: width 0.5s ease;
+    }
+    input.visible{
+      visibility: visible;
+    }
+  }
+  span.search-input-mobile{
+    input {
+      float: left;
+      position: relative;
+      padding: 7px 25px;
+      border-radius: unset;
+      -webkit-transition: all .5s ease;
+      -moz-transition: all .5s ease;
+      transition: width 0.5s ease;
+      top: -4px;
+      width: 75%;
+      margin-left: 15px;
+    }
+  }
 }
+@import "responsive";

@@ -1,0 +1,69 @@
+@media screen and (max-width: 992px) {
+  div.head div.push-me{
+    background-color: #282828;
+  }
+  div.landing-carousel{
+    margin-top: 0;
+  }
+  div.landing-carousel .carousel-main{
+    top: 0;
+    margin-top:0;
+  }
+  div.landing-navbar {
+    border-bottom: none;
+    margin-top:25px;
+    height: 50px;
+    background-color: #f7c51d;
+    i{
+      cursor: pointer;
+      transition-property: all;
+      transition-duration: 0.5s;
+      transition-timing-function: linear;
+    }
+    i:hover{
+      color: #000 !important;
+    }
+    div.navbar-bars-ico {
+      padding-top: 10px;
+      position: relative;
+      top: 0;
+      border: none;
+      i{
+        float: right;
+      }
+    }
+    div.navbar-home-ico {
+      padding-top: 10px;
+      .fa-search{
+        font-size: 25px;
+        padding-left: 10px;
+      }
+      position: relative;
+      top: 0;
+      border: none;
+    }
+    div.mobile-nav-list{
+      margin-top:20px;
+      div.well{
+        border-radius: 0;
+        margin-bottom: 0;
+        border: none;
+        padding: 10px;
+      }
+      a{
+        transition-property: color;
+        transition-duration: 0.5s;
+        transition-timing-function: linear;
+        font-size: 16px;
+        text-decoration: none;
+        color: #000;
+      }
+      a:hover{
+        color: #f7c51d;
+      }
+      a:focus{
+        outline: none;
+      }
+    }
+  }
+}

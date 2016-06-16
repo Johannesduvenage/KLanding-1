@@ -5,6 +5,8 @@ var controllers = angular.module('myApp', ['ui.bootstrap','ngAnimate']);
 controllers.controller('MultiLangCtrl', MultiLangCtrl);
 controllers.controller('LandingCarouselCtrl', LandingCarouselCtrl);
 controllers.controller('LandingNavbarCtrl', LandingNavbarCtrl);
+controllers.controller('LandingNavbarCollapseCtrl', LandingNavbarCollapseCtrl);
+
 
 
 function AppCtrl($scope, $http) {
@@ -101,6 +103,16 @@ function LandingCarouselCtrl($scope, $animate){
     }
 }
 function LandingNavbarCtrl($scope, $window) {
+    $scope.isCollapsed = true;
+    $scope.isSearchCollapse = true;
+    $scope.isVisible =  false;
+    $scope.setVisibility = function () {
+        $scope.isVisible = !$scope.isVisible;
+        if($scope.isVisible){
+            $scope.class = 'animated bounceInRight visible';
+        }
+        else $scope.class = 'animated bounceOutLeft visible';
+    };
     $scope.tabs = [
         { title:'Dynamic Title 1', content:'Dynamic content 1' },
         { title:'Dynamic Title 2', content:'Dynamic content 2', disabled: true }
@@ -116,6 +128,10 @@ function LandingNavbarCtrl($scope, $window) {
         name: 'Tabs'
     };
 }
+function LandingNavbarCollapseCtrl($scope) {
+    $scope.isCollapsed = false;
+}
+
 function MyCtrl1() {}
 MyCtrl1.$inject = [];
 
