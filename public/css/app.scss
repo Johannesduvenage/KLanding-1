@@ -8,6 +8,9 @@ body{
   font-size: 13px;
   font-family: $font;
 }
+.display-none{
+  display: none;
+}
 .no-padding{
   padding: 0;
 }
@@ -186,6 +189,37 @@ div.head {
 }
 /*** Landing Carousel ***/
 .landing-carousel{
+  div.slides{
+  opacity: 0.5;
+    margin:auto;
+    height: 500px;
+  }
+  div.carousel-inner{
+    height:500px;
+  }
+  div.carousel-caption{
+    position: relative;
+    top: -375px;
+    left: 0;
+    h3{
+      animation-delay: 1s;
+      opacity: 1;
+      color: #f7c51d;
+      font-weight: bold;
+      text-align: left;
+    }
+    h1{
+      animation-delay: 1.5s;
+      text-align: left;
+      span{
+        color: #f7c51d;
+      }
+    }
+    p{
+      font-size: 16px;
+      text-align: left;
+    }
+  }
   .carousel-main{
     top: -65px;
     position: relative;
@@ -195,8 +229,6 @@ div.head {
   width:100%;
   background-color: #000;
   .landing-slide *{
-    opacity: 0.5;
-    height: 500px;
     background-size: cover;
     background-position: center;
   }

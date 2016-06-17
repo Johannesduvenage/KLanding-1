@@ -1,12 +1,12 @@
-<header class="row header ">
+<header class="row header" ng-class="class" ng-controller="MultiLangCtrl">
     <!--***Desctop header -->
     <div class="header-left-part hidden-xs col-sm-4">
         <h4> ⚇ Made by Kiskin </h4>
     </div>
-    <div class="header-right-part hidden-xs col-sm-5  col-sm-offset-3">
+    <div  class="header-right-part hidden-xs col-sm-5 col-sm-offset-3">
         <div class="pull-right">
             <button class="btn btn-success">Contact</button>
-            <a href="#">
+            <a href ng-click="close()">
                 <span class="glyphicon glyphicon-remove"></span><span> Close</span>
             </a>
         </div>
@@ -14,7 +14,7 @@
 
     <!--***Mobile header -->
     <div class="header-left-part col-xs-6 hidden-sm hidden-md hidden-lg mobile">
-        <div ng-controller="MultiLangCtrl">
+        <div >
             <span uib-dropdown on-toggle="toggled(open)">
                 <a href id="simple-dropdown" uib-dropdown-toggle>
                     {{curShortSelect}}
@@ -28,12 +28,12 @@
             </span>
         </div>
     </div>
-    <div class="header-right-part col-xs-6 hidden-sm hidden-md hidden-lg mobile">
+    <div  class="header-right-part col-xs-6 hidden-sm hidden-md hidden-lg mobile">
         <div class="pull-right">
-            <a href="#">
+            <a href>
                 <span class="glyphicon glyphicon-envelope"></span>
             </a>
-            <a href="#">
+            <a href ng-click="close()">
                 <span class="glyphicon glyphicon-remove"></span>
             </a>
         </div>
@@ -188,10 +188,15 @@
     </div>
     <div ng-controller="LandingCarouselCtrl" class="carousel-main">
         <div>
-            <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides" template-url="views/templates/carouselTemplate.html">
+            <uib-carousel active="active" interval="myInterval" no-pause="true" template-url="views/templates/carouselTemplate.html">
                 <uib-slide class="landing-slide" ng-repeat="slide in slides track by slide.id" index="slide.id">
-                    <div  ng-style="{'background-image':'url({{slide.image[slide.id]}})'}" style="margin:auto;"></div>
-                    <div class="carousel-caption">
+                    <div class="slides" ng-style="{'background-image':'url({{slide.image[slide.id]}})'}"></div>
+                    <div class="carousel-caption container">
+                        <div class="col-xs-8 col-xs-offset-4">
+                            <h3 class="animated bounceInLeft">{{slide.headers}}</h3>
+                            <h1 class="animated {{slide.animation}}">{{slide.headers2}}</h1>
+                            <p class="animated jello">{{slide.text}}</p>
+                        </div>
                     </div>
                 </uib-slide>
             </uib-carousel>

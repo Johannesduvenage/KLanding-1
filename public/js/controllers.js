@@ -18,7 +18,12 @@ function AppCtrl($scope, $http) {
     $scope.name = 'Error!'
   });
 }
+
 function MultiLangCtrl($scope, $log) {
+    $scope.close = function(){
+        $scope.class = 'display-none';
+        console.log('click');
+    }
     $scope.langs = [
         {id: 0, lang: 'English', short: 'ENG'},
         {id: 1, lang: 'Ukraine', short: 'UK'},
@@ -47,16 +52,21 @@ function MultiLangCtrl($scope, $log) {
 }
 function LandingCarouselCtrl($scope, $animate){
     $animate.enabled(true);
-    $scope.myInterval = 0;
-    $scope.noWrapSlides = false;
+    $scope.myInterval = 5000;
+
     $scope.active = 0;
     var slides = $scope.slides = [];
     var currIndex = 0;
-
     $scope.addSlide = function() {
         slides.push({
             image: ['assets/IT-1.jpg','assets/IT-2.jpg','assets/IT-3.jpg'],
-            text: ['Nice image','Awesome photograph','That is so cool','I love that'][slides.length % 3],
+            headers: ['Logic IT Solutions','Logic IT Solutions'][slides.length % 3],
+            headers2: ['Logic IT Solutions can cope with different parts of the workflow','Created by Kiskin', 'Email us'][slides.length % 3],
+            text: ['The main values of LITS are dynamic growth and rock solid reputation as business partner.',
+                   'The main values of LITS are dynamic growth and rock solid reputation as business partner',
+                   'The main values of LITS are dynamic growth and rock solid reputation as business partner']
+                  [slides.length % 3],
+            animation: ['bounceInRight', 'fadeInDown', 'bounceInDown'][slides.length % 3],
             id: currIndex++
         });
     };

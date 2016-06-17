@@ -4,6 +4,9 @@ body {
   font-size: 13px;
   font-family: "Roboto", sans-serif; }
 
+.display-none {
+  display: none; }
+
 .no-padding {
   padding: 0; }
 
@@ -146,12 +149,34 @@ div.head .push-me:hover {
   height: 500px;
   width: 100%;
   background-color: #000; }
+  .landing-carousel div.slides {
+    opacity: 0.5;
+    margin: auto;
+    height: 500px; }
+  .landing-carousel div.carousel-inner {
+    height: 500px; }
+  .landing-carousel div.carousel-caption {
+    position: relative;
+    top: -375px;
+    left: 0; }
+    .landing-carousel div.carousel-caption h3 {
+      animation-delay: 1s;
+      opacity: 1;
+      color: #f7c51d;
+      font-weight: bold;
+      text-align: left; }
+    .landing-carousel div.carousel-caption h1 {
+      animation-delay: 1.5s;
+      text-align: left; }
+      .landing-carousel div.carousel-caption h1 span {
+        color: #f7c51d; }
+    .landing-carousel div.carousel-caption p {
+      font-size: 16px;
+      text-align: left; }
   .landing-carousel .carousel-main {
     top: -65px;
     position: relative; }
   .landing-carousel .landing-slide * {
-    opacity: 0.5;
-    height: 500px;
     background-size: cover;
     background-position: center; }
   .landing-carousel .carousel-control {
