@@ -13,10 +13,16 @@ body {
 .no-margin {
   margin: 0; }
 
-.no-decoration, header.header .mobile .dropdown a:hover, header.header .mobile .dropdown a:focus, div.head .lang-changer a:hover, div.head .lang-changer a:focus {
+.no-decoration, header.header .mobile .dropdown a:hover, header.header .mobile .dropdown a:focus, div.head .lang-changer a:hover, div.head .lang-changer a:focus, div.main span.request-text, div.main .href-slider {
   text-decoration: none;
   text-underline: none;
-  border: none; }
+  border: none;
+  color: #222; }
+
+.no-decoration :hover, header.header .mobile .dropdown a:hover :hover, header.header .mobile .dropdown a:focus :hover, div.head .lang-changer a:hover :hover, div.head .lang-changer a:focus :hover, div.main span.request-text :hover, div.main .href-slider :hover {
+  color: #222;
+  text-decoration: none;
+  text-underline: none; }
 
 .cursor {
   cursor: default; }
@@ -114,7 +120,7 @@ div.head .author-email {
   transition-duration: 1s;
   transition-timing-function: linear; }
 div.head .author-email:hover {
-  color: #000; }
+  color: #222; }
 div.head .land-ico {
   background: url("../assets/k-ico.png");
   width: 70px;
@@ -141,14 +147,14 @@ div.head .push-me {
   transition-duration: 0.5s;
   transition-timing-function: linear; }
 div.head .push-me:hover {
-  background-color: #000; }
+  background-color: #222; }
 
 /*** Landing Carousel ***/
 .landing-carousel {
   margin-top: 25px;
   height: 500px;
   width: 100%;
-  background-color: #000; }
+  background-color: #222; }
   .landing-carousel div.slides {
     opacity: 0.5;
     margin: auto;
@@ -326,7 +332,7 @@ div.main {
     color: #9d9d9d; }
   div.main div.left-text p:first-child {
     font-size: 20px;
-    color: #000; }
+    color: #222; }
   div.main div.firefox-info {
     margin-top: 20px; }
     div.main div.firefox-info p {
@@ -345,6 +351,29 @@ div.main {
     height: 100px;
     background: url("../assets/firefox.png");
     background-size: cover; }
+  div.main span.request-text {
+    border-bottom: 1px dotted #f7c51d; }
+    div.main span.request-text a {
+      color: #f7c51d;
+      -webkit-transition: color 1s ease;
+      -moz-transition: color 1s ease;
+      transition: color 1s ease; }
+  div.main span.request-text:hover {
+    color: #fff; }
+  div.main .href-slider {
+    cursor: pointer;
+    color: #f7c51d;
+    font-size: 14px;
+    text-decoration: none;
+    display: inline-block;
+    border-bottom: 3px solid transparent;
+    width: 0;
+    transition: 1s ease;
+    white-space: nowrap;
+    height: 25px; }
+  div.main .href-slider:hover {
+    border-bottom: 1px solid #f7c51d;
+    width: 80px; }
 
 @media screen and (max-width: 992px) {
   div.head div.push-me {

@@ -21,7 +21,14 @@ body{
     text-decoration: none;
     text-underline: none;
     border: none;
+    color: #222;
 }
+.no-decoration :hover{
+  color: #222;
+  text-decoration: none;
+  text-underline: none;
+}
+
 .cursor{
   cursor: default;
 }
@@ -151,7 +158,7 @@ div.head {
     transition-timing-function: linear;
   }
   .author-email:hover {
-    color: #000;
+    color: #222;
   }
   .land-ico{
     background: url("../assets/k-ico.png");
@@ -184,7 +191,7 @@ div.head {
     transition-timing-function: linear;
   }
   .push-me:hover{
-    background-color: #000;
+    background-color: #222;
   }
 }
 /*** Landing Carousel ***/
@@ -227,7 +234,7 @@ div.head {
   margin-top: 25px;
   height: 500px;
   width:100%;
-  background-color: #000;
+  background-color: #222;
   .landing-slide *{
     background-size: cover;
     background-position: center;
@@ -425,7 +432,7 @@ div.main{
     }
     p:first-child {
       font-size: 20px;
-      color: #000;
+      color: #222;
     }
   }
   div.firefox-info{
@@ -452,6 +459,36 @@ div.main{
     height:100px;
     background: url("../assets/firefox.png");
     background-size: cover;
+  }
+  span.request-text{
+    @extend .no-decoration;
+    border-bottom: 1px dotted #f7c51d;
+    a {
+      color: #f7c51d;
+      -webkit-transition: color 1s ease;
+      -moz-transition: color 1s ease;
+      transition: color 1s ease;
+    }
+  }
+  span.request-text:hover{
+    color: #fff;
+  }
+ .href-slider{
+    @extend .no-decoration;
+   cursor: pointer;
+    color: #f7c51d;
+    font-size: 14px;
+    text-decoration: none;
+    display: inline-block;
+    border-bottom: 3px solid transparent;
+    width: 0;
+    transition: 1s ease;
+    white-space: nowrap;
+    height: 25px;
+  }
+  .href-slider:hover{
+    border-bottom: 1px solid #f7c51d;
+    width: 80px;
   }
 }
 @import "responsive";
