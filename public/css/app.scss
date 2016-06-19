@@ -262,6 +262,12 @@ div.head {
 }
 /*** Landing navbar ***/
 div.landing-navbar{
+  div.middle-tabs ul.nav-tabs li{
+    width: auto;
+    display: inline;
+    display: inline-block;
+    float: left;
+  }
   position: relative;
   z-index: 11;
   border-bottom: 1px solid rgba(116, 116, 116, 0.5);
@@ -269,19 +275,34 @@ div.landing-navbar{
     a{
       border: none;
       margin: 0;
-      font-size: 14px;
+      font-size: 16px;
     }
   }
   div.middle-tabs{
     .nav-tabs  {
       float: left;
     }
+    ul {
+      display: inline-block;
+      float:left;
+    }
   }
   div.right-tabs{
+    ul.nav-tabs li{
+      width: auto;
+      display: inline;
+      display: inline-block;
+      float: left;
+    }
+    ul {
+      margin-top: 20px;
+      display: inline-block;
+      float:left;
+    }
     .nav-tabs > li > a {
       color: #fff;
       font-weight: bold;
-      padding-left: 20px;
+      padding: 0 9px;
     }
     .nav-tabs > li > a:hover {
       color: #f7c51d;
@@ -329,7 +350,7 @@ div.landing-navbar{
   .nav-tabs > li > a {
     color: #fff;
     font-weight: bold;
-    padding: 20px 0;
+    padding: 20px 14px;
   }
   .nav-tabs > li.active > a,
   .nav-tabs > li.active > a:hover,
@@ -393,6 +414,44 @@ div.landing-navbar{
       width: 75%;
       margin-left: 15px;
     }
+  }
+}
+div.main{
+  margin-top: 100px;
+  div.left-text{
+    p{
+      font-size: 17px;
+      color: #9d9d9d;
+    }
+    p:first-child {
+      font-size: 20px;
+      color: #000;
+    }
+  }
+  div.firefox-info{
+    p{
+      color: #9d9d9d;
+      font-size: 15px;
+    }
+    margin-top: 20px;
+  }
+  div.chrome-info{
+    p{
+      color: #9d9d9d;
+      font-size: 15px;
+    }
+  }
+  div.chrome-img{
+    width: 100px;
+    height:100px;
+    background: url("../assets/chrome.png");
+    background-size: cover;
+  }
+  div.firefox-img{
+    width: 100px;
+    height:100px;
+    background: url("../assets/firefox.png");
+    background-size: cover;
   }
 }
 @import "responsive";

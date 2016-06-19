@@ -206,16 +206,33 @@ div.landing-navbar {
   position: relative;
   z-index: 11;
   border-bottom: 1px solid rgba(116, 116, 116, 0.5); }
+  div.landing-navbar div.middle-tabs ul.nav-tabs li {
+    width: auto;
+    display: inline;
+    display: inline-block;
+    float: left; }
   div.landing-navbar .nav-tabs a {
     border: none;
     margin: 0;
-    font-size: 14px; }
+    font-size: 16px; }
   div.landing-navbar div.middle-tabs .nav-tabs {
+    float: left; }
+  div.landing-navbar div.middle-tabs ul {
+    display: inline-block;
+    float: left; }
+  div.landing-navbar div.right-tabs ul.nav-tabs li {
+    width: auto;
+    display: inline;
+    display: inline-block;
+    float: left; }
+  div.landing-navbar div.right-tabs ul {
+    margin-top: 20px;
+    display: inline-block;
     float: left; }
   div.landing-navbar div.right-tabs .nav-tabs > li > a {
     color: #fff;
     font-weight: bold;
-    padding-left: 20px; }
+    padding: 0 9px; }
   div.landing-navbar div.right-tabs .nav-tabs > li > a:hover {
     color: #f7c51d;
     transition-property: color;
@@ -252,7 +269,7 @@ div.landing-navbar {
   div.landing-navbar .nav-tabs > li > a {
     color: #fff;
     font-weight: bold;
-    padding: 20px 0; }
+    padding: 20px 14px; }
   div.landing-navbar .nav-tabs > li.active > a,
   div.landing-navbar .nav-tabs > li.active > a:hover,
   div.landing-navbar .nav-tabs > li > a:hover,
@@ -301,6 +318,33 @@ div.landing-navbar {
     top: -4px;
     width: 75%;
     margin-left: 15px; }
+
+div.main {
+  margin-top: 100px; }
+  div.main div.left-text p {
+    font-size: 17px;
+    color: #9d9d9d; }
+  div.main div.left-text p:first-child {
+    font-size: 20px;
+    color: #000; }
+  div.main div.firefox-info {
+    margin-top: 20px; }
+    div.main div.firefox-info p {
+      color: #9d9d9d;
+      font-size: 15px; }
+  div.main div.chrome-info p {
+    color: #9d9d9d;
+    font-size: 15px; }
+  div.main div.chrome-img {
+    width: 100px;
+    height: 100px;
+    background: url("../assets/chrome.png");
+    background-size: cover; }
+  div.main div.firefox-img {
+    width: 100px;
+    height: 100px;
+    background: url("../assets/firefox.png");
+    background-size: cover; }
 
 @media screen and (max-width: 992px) {
   div.head div.push-me {
