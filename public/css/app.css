@@ -155,6 +155,8 @@ div.head .push-me:hover {
   height: 500px;
   width: 100%;
   background-color: #222; }
+  .landing-carousel a.carousel-control {
+    z-index: 999; }
   .landing-carousel div.slides {
     opacity: 0.5;
     margin: auto;
@@ -325,6 +327,7 @@ div.landing-navbar {
     width: 75%;
     margin-left: 15px; }
 
+/*** Main ***/
 div.main {
   margin-top: 100px; }
   div.main div.left-text p {
@@ -369,11 +372,34 @@ div.main {
     border-bottom: 3px solid transparent;
     width: 0;
     transition: 1s ease;
+    -webkit-transition: 1s ease;
+    -moz-transition: 1s ease;
     white-space: nowrap;
     height: 25px; }
   div.main .href-slider:hover {
     border-bottom: 1px solid #f7c51d;
     width: 80px; }
+
+/*** Introduct ***/
+div.introduct {
+  margin-top: 50px;
+  text-align: center; }
+  div.introduct div.introduct-block span {
+    color: #777;
+    font-size: 15px; }
+  div.introduct div.introduct-block h3 {
+    color: #222;
+    cursor: default;
+    -webkit-transition: color 1s ease;
+    -moz-transition: color 1s ease;
+    transition: color 1s ease; }
+  div.introduct div.introduct-block h3:hover {
+    color: #f7c51d; }
+  div.introduct div.introduct-iamges {
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    width: 100%; }
 
 @media screen and (max-width: 992px) {
   div.head div.push-me {
@@ -431,5 +457,18 @@ div.main {
         color: #f7c51d; }
       div.landing-navbar div.mobile-nav-list a:focus {
         outline: none; } }
+@media screen and (max-width: 768px) {
+  div.main {
+    margin-top: 50px; }
+
+  div.chrome-info, div.chrome-info *,
+  div.firefox-info, div.firefox-info * {
+    padding: 0; }
+
+  div.introduct .introduct-block:not(:first-child) {
+    margin-top: 50px; }
+
+  div.carousel-caption h1 {
+    font-size: 24px; } }
 
 /*# sourceMappingURL=app.css.map */

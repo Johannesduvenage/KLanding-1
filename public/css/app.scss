@@ -196,6 +196,9 @@ div.head {
 }
 /*** Landing Carousel ***/
 .landing-carousel{
+  a.carousel-control{
+    z-index: 999;
+  }
   div.slides{
   opacity: 0.5;
     margin:auto;
@@ -423,6 +426,7 @@ div.landing-navbar{
     }
   }
 }
+/*** Main ***/
 div.main{
   margin-top: 100px;
   div.left-text{
@@ -483,6 +487,8 @@ div.main{
     border-bottom: 3px solid transparent;
     width: 0;
     transition: 1s ease;
+   -webkit-transition: 1s ease;
+   -moz-transition: 1s ease;
     white-space: nowrap;
     height: 25px;
   }
@@ -491,4 +497,32 @@ div.main{
     width: 80px;
   }
 }
+/*** Introduct ***/
+div.introduct{
+  margin-top: 50px;
+  text-align: center;
+  div.introduct-block{
+    span {
+      color: #777;
+      font-size: 15px;
+    }
+    h3 {
+      color: #222;
+      cursor: default;
+      -webkit-transition: color 1s ease;
+      -moz-transition: color 1s ease;
+      transition: color 1s ease;
+    }
+    h3:hover{
+      color: #f7c51d;
+    }
+  }
+  div.introduct-iamges{
+    background-size: cover;
+    background-position: center;
+    height:250px;
+    width: 100%;
+  }
+}
+
 @import "responsive";

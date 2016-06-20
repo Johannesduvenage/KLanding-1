@@ -6,6 +6,8 @@ controllers.controller('MultiLangCtrl', MultiLangCtrl);
 controllers.controller('LandingCarouselCtrl', LandingCarouselCtrl);
 controllers.controller('LandingNavbarCtrl', LandingNavbarCtrl);
 controllers.controller('LandingNavbarCollapseCtrl', LandingNavbarCollapseCtrl);
+controllers.controller('IntroductCtrl', IntroductCtrl);
+
 
 
 
@@ -23,7 +25,7 @@ function MultiLangCtrl($scope, $log) {
     $scope.close = function(){
         $scope.class = 'display-none';
         console.log('click');
-    }
+    };
     $scope.langs = [
         {id: 0, lang: 'English', short: 'ENG'},
         {id: 1, lang: 'Ukraine', short: 'UK'},
@@ -141,7 +143,21 @@ function LandingNavbarCtrl($scope, $window) {
 function LandingNavbarCollapseCtrl($scope) {
     $scope.isCollapsed = false;
 }
-
+function IntroductCtrl($scope){
+ $scope.imageArray = [{id: 0,
+                        background: 'assets/it1_400x300.jpg',
+                        header: 'Agricultural Processing',
+                        text: 'Objectively innovate empowered'},
+                      {id: 1,
+                        background: 'assets/it2_400x300.jpg',
+                        header: 'Machinery & Tools ',
+                        text: 'Objectively innovate empowered'},
+                      {id: 2,
+                        background: 'assets/it3_400x300.jpg',
+                        header: 'Coal & Solid Fuels',
+                        text: 'Objectively innovate empowered'}
+ ];
+}
 function MyCtrl1() {}
 MyCtrl1.$inject = [];
 
