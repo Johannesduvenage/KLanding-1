@@ -1,4 +1,5 @@
-<header class="row header" ng-class="class" ng-controller="MultiLangCtrl">
+<div ng-controller="AppCtrl">
+    <header class="row header" ng-class="class">
     <!--***Desctop header -->
     <div class="header-left-part hidden-xs col-sm-4">
         <h4> ⚇ Made by Kiskin </h4>
@@ -51,7 +52,7 @@
                         <span>Email us:</span><span class="author-email pointer"> kiskinvlad@gmail.com</span>
                     </li>
                     <li class="lang-changer pull-right hidden-xs">
-                        <div ng-controller="MultiLangCtrl" class="pull-right">
+                        <div class="pull-right">
                            <span uib-dropdown on-toggle="toggled(open)">
                               <a href id="simple-dropdown" uib-dropdown-toggle>
                                   {{currentSelect}}
@@ -106,7 +107,7 @@
         </div>
     </div>
 </div>
-<div class="landing-navbar hidden-md hidden-lg" ng-controller="LandingNavbarCtrl">
+<div class="landing-navbar hidden-md hidden-lg">
     <div class="container">
         <div>
             <div class="navbar-home-ico col-md-1 col-xs-10">
@@ -150,7 +151,7 @@
 <div class="landing-carousel">
     <div class="landing-navbar hidden-sm hidden-xs">
         <div class="container">
-            <div ng-controller="LandingNavbarCtrl">
+            <div>
                 <div class="navbar-home-ico col-md-1 col-sm-2 col-xs-5">
                     <i class="fa fa-home inline cursor" aria-hidden="true"></i>
                     <i class="fa fa-bars inline hidden-md hidden-lg" aria-hidden="true"></i>
@@ -181,12 +182,12 @@
                 </div>
                 <div class="navbar-search-ico col-md-1 col-xs-6 col-xs-offset-1 col-sm-offset-4 col-md-offset-0">
                     <i class="fa fa-search pointer" aria-hidden="true" ng-click="setVisibility()"></i>
-                    <span class="search-input"><input placeholder="Enter your search term..." ng-class="class" /></span>
+                    <span class="search-input"><input placeholder="Enter your search term..." ng-class="animate" /></span>
                 </div>
             </div>
         </div>
     </div>
-    <div ng-controller="LandingCarouselCtrl" class="carousel-main">
+    <div class="carousel-main">
         <div>
             <uib-carousel active="active" interval="myInterval" no-pause="true" template-url="views/templates/carouselTemplate.html">
                 <uib-slide class="landing-slide" ng-repeat="slide in slides track by slide.id" index="slide.id">
@@ -236,7 +237,7 @@
         </div>
     </div>
 </div>
-<div class="animated container introduct" ng-controller="IntroductCtrl" zum-waypoint="waypoints" down="down" up="up" offset="20%"
+<div class="animated container introduct" zum-waypoint="waypoints" down="down" up="up" offset="20%"
      ng-class="{fadeIn : waypoints.down, fadeOut : waypoints.up}">
     <div class="col-md-4 col-sm-6 col-xs-12 introduct-block"
          ng-repeat="image in imageArray">
@@ -244,5 +245,5 @@
         <h3>{{image.header}}</h3>
         <span>{{image.text}}</span>
     </div>
-
+</div>
 </div>

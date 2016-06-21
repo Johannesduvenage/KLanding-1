@@ -1,27 +1,12 @@
 'use strict';
 
 /* Controllers */
-var controllers = angular.module('myApp', ['ui.bootstrap','ngAnimate']);
-controllers.controller('MultiLangCtrl', MultiLangCtrl);
-controllers.controller('LandingCarouselCtrl', LandingCarouselCtrl);
-controllers.controller('LandingNavbarCtrl', LandingNavbarCtrl);
-controllers.controller('LandingNavbarCollapseCtrl', LandingNavbarCollapseCtrl);
-controllers.controller('IntroductCtrl', IntroductCtrl);
+var app = angular.module('myApp');
+app.controller('AppCtrl', AppCtrl);
+function AppCtrl($scope, $window, $log, $animate) {
+    $animate.enabled(true);
 
-
-
-
-function AppCtrl($scope, $http) {
-  $http({method: 'GET', url: '/api/name'}).
-  success(function(data, status, headers, config) {
-    $scope.name = data.name;
-  }).
-  error(function(data, status, headers, config) {
-    $scope.name = 'Error!'
-  });
-}
-
-function MultiLangCtrl($scope, $log) {
+/*** Multi Lang controller ***/
     $scope.close = function(){
         $scope.class = 'display-none';
         console.log('click');
@@ -51,9 +36,9 @@ function MultiLangCtrl($scope, $log) {
     };
 
     $scope.appendToEl = angular.element(document.querySelector('#dropdown-long-content'));
-}
-function LandingCarouselCtrl($scope, $animate){
-    $animate.enabled(true);
+
+/*** Landing carousel controller ***/
+
     $scope.myInterval = 5000;
 
     $scope.active = 0;
@@ -65,9 +50,9 @@ function LandingCarouselCtrl($scope, $animate){
             headers: ['Logic IT Solutions','Logic IT Solutions'][slides.length % 3],
             headers2: ['Logic IT Solutions can cope with different parts of the workflow','Created by Kiskin', 'Email us'][slides.length % 3],
             text: ['The main values of LITS are dynamic growth and rock solid reputation as business partner.',
-                   'The main values of LITS are dynamic growth and rock solid reputation as business partner',
-                   'The main values of LITS are dynamic growth and rock solid reputation as business partner']
-                  [slides.length % 3],
+                'The main values of LITS are dynamic growth and rock solid reputation as business partner',
+                'The main values of LITS are dynamic growth and rock solid reputation as business partner']
+                [slides.length % 3],
             animation: ['bounceInRight', 'fadeInDown', 'bounceInDown'][slides.length % 3],
             id: currIndex++
         });
@@ -113,17 +98,17 @@ function LandingCarouselCtrl($scope, $animate){
 
         return array;
     }
-}
-function LandingNavbarCtrl($scope, $window) {
-    $scope.isCollapsed = true;
+
+/*** Landing Navbar controller ***/
+$scope.isCollapsed = true;
     $scope.isSearchCollapse = true;
     $scope.isVisible =  false;
     $scope.setVisibility = function () {
         $scope.isVisible = !$scope.isVisible;
         if($scope.isVisible){
-            $scope.class = 'animated bounceInRight visible';
+            $scope.animate = 'animated bounceInRight visible';
         }
-        else $scope.class = 'animated bounceOutLeft visible';
+        else $scope.animate = 'animated bounceOutLeft visible';
     };
     $scope.tabs = [
         { title:'Dynamic Title 1', content:'Dynamic content 1' },
@@ -139,25 +124,25 @@ function LandingNavbarCtrl($scope, $window) {
     $scope.model = {
         name: 'Tabs'
     };
+/*** Landing navbar collapse controller ***/
+$scope.isCollapsed = false;
+/*** Introduct controller ***/
+$scope.imageArray = [{id: 0,
+    background: 'assets/it1_400x300.jpg',
+    header: 'Agricultural Processing',
+    text: 'Objectively innovate empowered'},
+    {id: 1,
+        background: 'assets/it2_400x300.jpg',
+        header: 'Machinery & Tools ',
+        text: 'Objectively innovate empowered'},
+    {id: 2,
+        background: 'assets/it3_400x300.jpg',
+        header: 'Coal & Solid Fuels',
+        text: 'Objectively innovate empowered'}
+];
 }
-function LandingNavbarCollapseCtrl($scope) {
-    $scope.isCollapsed = false;
-}
-function IntroductCtrl($scope){
- $scope.imageArray = [{id: 0,
-                        background: 'assets/it1_400x300.jpg',
-                        header: 'Agricultural Processing',
-                        text: 'Objectively innovate empowered'},
-                      {id: 1,
-                        background: 'assets/it2_400x300.jpg',
-                        header: 'Machinery & Tools ',
-                        text: 'Objectively innovate empowered'},
-                      {id: 2,
-                        background: 'assets/it3_400x300.jpg',
-                        header: 'Coal & Solid Fuels',
-                        text: 'Objectively innovate empowered'}
- ];
-}
+AppCtrl.$inject=['$scope', '$window','$log','$animate'];
+
 function MyCtrl1() {}
 MyCtrl1.$inject = [];
 
