@@ -100,7 +100,6 @@ function AppCtrl($scope, $window, $log, $animate) {
     }
 
 /*** Landing Navbar controller ***/
-$scope.isCollapsed = true;
     $scope.isSearchCollapse = true;
     $scope.isVisible =  false;
     $scope.setVisibility = function () {
@@ -124,8 +123,37 @@ $scope.isCollapsed = true;
     $scope.model = {
         name: 'Tabs'
     };
+    var carouselChildDesc,carouselChildMob;
+    var checker = false;
+    var d;
+    $scope.navBarIsVisible = function($el) {
+        if(checker){
+            /***desctop***/
+            carouselChildDesc = $el[0].children[0].attributes[0].nodeValue.split(' ');
+            carouselChildDesc.pop();
+            carouselChildDesc = carouselChildDesc.join(' ');
+            $el[0].children[0].attributes[0].nodeValue = carouselChildDesc;
+            /***mobile***/
+            carouselChildMob = d.className.split(' ');
+            carouselChildMob.pop();
+            carouselChildMob = carouselChildMob.join(' ');
+            d.className = carouselChildMob;
+            d.style.marginTop = '25px';
+            checker = false;
+        }
+    };
+    $scope.navBarIsNotVisible = function($el) {
+        checker = true;
+        carouselChildDesc = $el[0].children[0].attributes[0].nodeValue;
+        carouselChildDesc += ' fixed-navbar';
+        $el[0].children[0].attributes[0].nodeValue = carouselChildDesc;
+        /***mobile***/
+        d = document.getElementById("mobile-navbar");
+        d.className += " fixed-navbar";
+        d.style.margin = 0;
+    };
 /*** Landing navbar collapse controller ***/
-$scope.isCollapsed = false;
+$scope.isCollapsed = true;
 /*** Introduct controller ***/
 $scope.imageArray = [{id: 0,
     background: 'assets/it1_400x300.jpg',
@@ -140,6 +168,15 @@ $scope.imageArray = [{id: 0,
         header: 'Coal & Solid Fuels',
         text: 'Objectively innovate empowered'}
 ];
+    $scope.animateElementIn = function($el) {
+        $el.removeClass('custom-hide fadeOut');
+        $el.addClass('fadeIn');
+    };
+
+    $scope.animateElementOut = function($el) {
+        $el.addClass('fadeOut');
+        $el.removeClass('custom-hide fadeIn');
+    };
 }
 AppCtrl.$inject=['$scope', '$window','$log','$animate'];
 

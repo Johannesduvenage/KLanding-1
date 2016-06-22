@@ -1,5 +1,4 @@
 $font: 'Roboto', sans-serif;
-
 html{
 }
 body{
@@ -10,6 +9,9 @@ body{
 }
 .display-none{
   display: none;
+}
+.custom-hide{
+  visibility: hidden;
 }
 .no-padding{
   padding: 0;
@@ -27,6 +29,15 @@ body{
   color: #222;
   text-decoration: none;
   text-underline: none;
+}
+.fixed-navbar{
+  position: fixed!important;
+  width: 100%;
+  top: 0;
+  background-color: #000;
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: linear;
 }
 
 .cursor{

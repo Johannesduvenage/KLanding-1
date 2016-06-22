@@ -107,7 +107,7 @@
         </div>
     </div>
 </div>
-<div class="landing-navbar hidden-md hidden-lg">
+<div class="landing-navbar hidden-md hidden-lg" id="mobile-navbar">
     <div class="container">
         <div>
             <div class="navbar-home-ico col-md-1 col-xs-10">
@@ -148,7 +148,7 @@
         </ul>
     </div>
 </div>
-<div class="landing-carousel">
+<div class="landing-carousel animated" when-visible="navBarIsVisible" when-not-visible="navBarIsNotVisible">
     <div class="landing-navbar hidden-sm hidden-xs">
         <div class="container">
             <div>
@@ -237,10 +237,9 @@
         </div>
     </div>
 </div>
-<div class="animated container introduct" zum-waypoint="waypoints" down="down" up="up" offset="20%"
-     ng-class="{fadeIn : waypoints.down, fadeOut : waypoints.up}">
-    <div class="col-md-4 col-sm-6 col-xs-12 introduct-block"
-         ng-repeat="image in imageArray">
+<div class="container introduct" >
+    <div class="col-md-4 col-sm-6 col-xs-12 introduct-block animated custom-hide"
+         ng-repeat="image in imageArray" when-visible="animateElementIn" when-not-visible="animateElementOut">
         <div class="introduct-iamges" ng-style="{'background-image':'url({{image.background}})'}"></div>
         <h3>{{image.header}}</h3>
         <span>{{image.text}}</span>
