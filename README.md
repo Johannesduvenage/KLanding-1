@@ -24,7 +24,7 @@ Based on [jimakker/angular-express-bootstrap-seed](https://github.com/jimakker/a
 - Jquery-2.0.3
 - angular-scroll-animate [rpocklin/angular-scroll-animate] (https://github.com/rpocklin/angular-scroll-animate)
 
-## Hot to start
+## How to start
 1. Install node ([How to] (https://nodejs.org/en/download/package-manager/)).
 2. Clone https://github.com/kiskinvlad/KLanding-1
 3. npm i
