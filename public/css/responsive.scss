@@ -83,4 +83,10 @@
       font-size: 24px;
     }
   }
+  ul.image-filter{
+    margin-top: 20px;
+  }
+ div.portfolio-images ul li:not(:first-child){
+    margin-top: 20px;
+  }
 }

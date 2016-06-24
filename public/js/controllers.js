@@ -177,6 +177,63 @@ $scope.imageArray = [{id: 0,
         $el.addClass('fadeOut');
         $el.removeClass('custom-hide fadeIn');
     };
+/*** Portfolio controller ***/
+$scope.filters = { };
+    $scope.links = [
+        {name: 'Cold', prop: 'cold', bxClass: ""},
+        {name: 'Blue', prop: 'blue', bxClass: ""},
+        {name: 'Red', prop: 'red', bxClass: ""},
+        {name: 'Display All', prop: '', bxClass: "active-img"}
+
+
+    ];
+    $scope.colors = [
+        {id: 0, name: 'Red', props: ['red', 'hot'], back:{background:'url("assets/red-background.jpg")'}, bxClass: 'fadeIn'},
+        {id: 1, name: 'Blue', props: ['blue', 'cold'], back: {background:'url("assets/blue-background.jpg")'}, bxClass: 'fadeIn'},
+        {id: 3, name: 'Beach', props: [''], back:{background: 'url("assets/beach-background.jpg")'}, bxClass: 'fadeIn'},
+        {id: 4, name: 'Cold', props: ['cold'], back:{background: 'url("assets/cold-background.jpg")'}, bxClass: 'fadeIn'}
+
+    ];
+    $scope.findFilterProp = function(link){
+        $scope.links.map((el) => {
+           if(el!== link) {
+               el.bxClass = '';
+           }
+            else {
+               el.bxClass = 'active-img';
+           }
+        });
+        if(link.prop === '') {
+            $scope.colors.map((color) => {
+                color.bxClass = 'fadeIn';
+            });
+            return;
+        }
+        $scope.colorsOut = [];
+        $scope.colors.map((color) => {
+            var check = false;
+            color.props.map((prop) => {
+                if(prop===link.prop){
+                    color.bxClass = 'fadeIn size-up';
+                    check = true;
+                }
+                else {
+                    if(!check){
+                    color.bxClass = 'fadeOut size-down';
+                    }
+                }
+            });
+        });
+    };
+    $scope.animateElementFromLeft = function($el) {
+        $el.removeClass('custom-hide slideOutRight');
+        $el.addClass('slideInLeft');
+    };
+
+    $scope.animateElementOutToLeft = function($el) {
+        $el.addClass('slideOutRight');
+        $el.removeClass('custom-hide slideInLeft');
+    }
 }
 AppCtrl.$inject=['$scope', '$window','$log','$animate'];
 

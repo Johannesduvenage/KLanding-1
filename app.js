@@ -11,6 +11,7 @@ var express = require('express'),
 
 
 var app = module.exports = express();
+var favicon = require('serve-favicon');
 
 /**
 * Configuration
@@ -21,6 +22,7 @@ app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname + '/public/views');
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
+app.use(favicon(__dirname + '/public/assets/favicon.ico'));
 app.use(express.logger('dev'));
 app.use(express.bodyParser());
 app.use(express.methodOverride());

@@ -1,248 +1,270 @@
 <div ng-controller="AppCtrl">
     <header class="row header" ng-class="class">
-    <!--***Desctop header -->
-    <div class="header-left-part hidden-xs col-sm-4">
-        <h4> ⚇ Made by Kiskin </h4>
-    </div>
-    <div  class="header-right-part hidden-xs col-sm-5 col-sm-offset-3">
-        <div class="pull-right">
-            <button class="btn btn-success">Contact</button>
-            <a href ng-click="close()">
-                <span class="glyphicon glyphicon-remove"></span><span> Close</span>
-            </a>
+        <!--***Desctop header -->
+        <div class="header-left-part hidden-xs col-sm-4">
+            <h4> ⚇ Made by Kiskin </h4>
         </div>
-    </div>
+        <div  class="header-right-part hidden-xs col-sm-5 col-sm-offset-3">
+            <div class="pull-right">
+                <button class="btn btn-success">Contact</button>
+                <a href ng-click="close()">
+                    <span class="glyphicon glyphicon-remove"></span><span> Close</span>
+                </a>
+            </div>
+        </div>
 
-    <!--***Mobile header -->
-    <div class="header-left-part col-xs-6 hidden-sm hidden-md hidden-lg mobile">
-        <div >
-            <span uib-dropdown on-toggle="toggled(open)">
-                <a href id="simple-dropdown" uib-dropdown-toggle>
-                    {{curShortSelect}}
-                    <i class="fa fa-angle-down" aria-hidden="true"></i>
-                </a>
-                <ul class="dropdown-menu" uib-dropdown-menu aria-labelledby="simple-dropdown">
-                    <li ng-repeat="choice in langs">
-                        <a href ng-click="setChoice(choice.short)">{{choice.short}}</a>
-                    </li>
-                </ul>
-            </span>
-        </div>
-    </div>
-    <div  class="header-right-part col-xs-6 hidden-sm hidden-md hidden-lg mobile">
-        <div class="pull-right">
-            <a href>
-                <span class="glyphicon glyphicon-envelope"></span>
-            </a>
-            <a href ng-click="close()">
-                <span class="glyphicon glyphicon-remove"></span>
-            </a>
-        </div>
-    </div>
-</header>
-<div class="head container-fluid">
-    <div class="container">
-        <div class="top-header">
-            <div class="col-sm-6 col-xs-4">
-                <span>This template created by Kiskin Vladislav</span>
-            </div>
-            <div class="col-sm-6 col-xs-8">
-                <ul class="list-inline pull-right">
-                    <li>
-                        <span>Email us:</span><span class="author-email pointer"> kiskinvlad@gmail.com</span>
-                    </li>
-                    <li class="lang-changer pull-right hidden-xs">
-                        <div class="pull-right">
-                           <span uib-dropdown on-toggle="toggled(open)">
-                              <a href id="simple-dropdown" uib-dropdown-toggle>
-                                  {{currentSelect}}
-                                  <i class="fa fa-angle-down" aria-hidden="true"></i>
-                              </a>
-                              <ul class="dropdown-menu" uib-dropdown-menu aria-labelledby="simple-dropdown">
-                                  <li ng-repeat="choice in langs">
-                                      <a href ng-click="setChoice(choice.lang)">{{choice.lang}}</a>
-                                  </li>
-                              </ul>
-                            </span>
-                        </div>
-                    </li>
-                </ul>
+        <!--***Mobile header -->
+        <div class="header-left-part col-xs-6 hidden-sm hidden-md hidden-lg mobile">
+            <div >
+                <span uib-dropdown on-toggle="toggled(open)">
+                    <a href id="simple-dropdown" uib-dropdown-toggle>
+                        {{curShortSelect}}
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </a>
+                    <ul class="dropdown-menu" uib-dropdown-menu aria-labelledby="simple-dropdown">
+                        <li ng-repeat="choice in langs">
+                            <a href ng-click="setChoice(choice.short)">{{choice.short}}</a>
+                        </li>
+                    </ul>
+                </span>
             </div>
         </div>
-        <div class="col-xs-12 middle-header">
-            <div class="col-md-4 col-xs-12">
-                <div class="inline">
-                     <div class="land-ico"></div>
-                </div>
-                <div class="inline ico-info">
-                    <h3>K-Landing #1</h3>
-                    <span>Klanding template</span>
-                </div>
-            </div>
-            <div class="col-md-2 col-xs-4">
-                <div class="inline ico-info">
-                    <h4>Landing page #1</h4>
-                    <span>created by Kiskin</span>
-                </div>
-            </div>
-            <div class="col-md-2 col-xs-4">
-                <div class="inline ico-info">
-                    <h4>Global Certificate</h4>
-                    <span>ISO 9001:2015</span>
-                </div>
-            </div>
-            <div class="col-md-2 col-xs-4">
-                <div class="inline ico-info">
-                    <h4>Award Winning</h4>
-                    <span>Solution Of The Year</span>
-                </div>
-            </div>
-            <div class="col-md-2 col-xs-12">
+        <div  class="header-right-part col-xs-6 hidden-sm hidden-md hidden-lg mobile">
+            <div class="pull-right">
                 <a href>
-                    <div class="inline push-me">
-                        PUSH ME
-                    </div>
+                    <span class="glyphicon glyphicon-envelope"></span>
+                </a>
+                <a href ng-click="close()">
+                    <span class="glyphicon glyphicon-remove"></span>
                 </a>
             </div>
         </div>
-    </div>
-</div>
-<div class="landing-navbar hidden-md hidden-lg" id="mobile-navbar">
-    <div class="container">
-        <div>
-            <div class="navbar-home-ico col-md-1 col-xs-10">
-                <i class="fa fa-home inline" aria-hidden="true"  ng-click="isCollapsed = !isCollapsed"></i>
-                <span class="search-input-mobile"><input placeholder="Enter your search term..."  /></span>
+    </header>
+    <div class="head container-fluid">
+        <div class="container">
+            <div class="top-header">
+                <div class="col-sm-6 col-xs-4">
+                    <span>This template created by Kiskin Vladislav</span>
+                </div>
+                <div class="col-sm-6 col-xs-8">
+                    <ul class="list-inline pull-right">
+                        <li>
+                            <span>Email us:</span><span class="author-email pointer"> kiskinvlad@gmail.com</span>
+                        </li>
+                        <li class="lang-changer pull-right hidden-xs">
+                            <div class="pull-right">
+                               <span uib-dropdown on-toggle="toggled(open)">
+                                  <a href id="simple-dropdown" uib-dropdown-toggle>
+                                      {{currentSelect}}
+                                      <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                  </a>
+                                  <ul class="dropdown-menu" uib-dropdown-menu aria-labelledby="simple-dropdown">
+                                      <li ng-repeat="choice in langs">
+                                          <a href ng-click="setChoice(choice.lang)">{{choice.lang}}</a>
+                                      </li>
+                                  </ul>
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="navbar-bars-ico col-md-1 col-xs-2 col-md-offset-0">
-                    <i class="fa fa-bars inline hidden-md hidden-lg" type="button" aria-hidden="true" ng-click="isCollapsed = !isCollapsed"></i>
+            <div class="col-xs-12 middle-header">
+                <div class="col-md-4 col-xs-12">
+                    <div class="inline">
+                         <div class="land-ico"></div>
+                    </div>
+                    <div class="inline ico-info">
+                        <h3>K-Landing #1</h3>
+                        <span>Klanding template</span>
+                    </div>
+                </div>
+                <div class="col-md-2 col-xs-4">
+                    <div class="inline ico-info">
+                        <h4>Landing page #1</h4>
+                        <span>created by Kiskin</span>
+                    </div>
+                </div>
+                <div class="col-md-2 col-xs-4">
+                    <div class="inline ico-info">
+                        <h4>Global Certificate</h4>
+                        <span>ISO 9001:2015</span>
+                    </div>
+                </div>
+                <div class="col-md-2 col-xs-4">
+                    <div class="inline ico-info">
+                        <h4>Award Winning</h4>
+                        <span>Solution Of The Year</span>
+                    </div>
+                </div>
+                <div class="col-md-2 col-xs-12">
+                    <a href>
+                        <div class="inline push-me">
+                            PUSH ME
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-    <div uib-collapse="isCollapsed" class="mobile-nav-list">
-        <ul class="list-unstyled">
-            <li>
-                <div class="well well-lg"><a href>Home</a></div>
-            </li>
-            <li>
-                <div class="well well-lg"><a href>Solution</a></div>
-            </li>
-            <li>
-                <div class="well well-lg"><a href>Projects</a></div>
-            </li>
-            <li>
-                <div class="well well-lg"><a href>Blog</a></div>
-            </li>
-            <li>
-                <div class="well well-lg"><a href>Services</a></div>
-            </li>
-            <li>
-                <div class="well well-lg"><a href>Shop</a></div>
-            </li>
-            <li>
-                <div class="well well-lg"><a href>About</a></div>
-            </li>
-            <li>
-                <div class="well well-lg"><a href>Contact</a></div>
-            </li>
-        </ul>
-    </div>
-</div>
-<div class="landing-carousel animated" when-visible="navBarIsVisible" when-not-visible="navBarIsNotVisible">
-    <div class="landing-navbar hidden-sm hidden-xs">
+    <div class="landing-navbar hidden-md hidden-lg" id="mobile-navbar">
         <div class="container">
             <div>
-                <div class="navbar-home-ico col-md-1 col-sm-2 col-xs-5">
-                    <i class="fa fa-home inline cursor" aria-hidden="true"></i>
-                    <i class="fa fa-bars inline hidden-md hidden-lg" aria-hidden="true"></i>
+                <div class="navbar-home-ico col-md-1 col-xs-10">
+                    <i class="fa fa-home inline" aria-hidden="true"  ng-click="isCollapsed = !isCollapsed"></i>
+                    <span class="search-input-mobile"><input placeholder="Enter your search term..."  /></span>
                 </div>
-                <div class="col-md-10 hidden-sm hidden-xs no-padding">
-                    <div class="col-md-10 middle-tabs no-padding">
-                        <uib-tabset active="activeJustified" justified="true">
-                        <uib-tab index="0" heading="Home" template-url="views/templates/tabTemplate.html"></uib-tab>
-                        <uib-tab index="1" heading="Solution" template-url="views/templates/tabTemplate.html"></uib-tab>
-                        <uib-tab index="2" heading="Projects" template-url="views/templates/tabTemplate.html"></uib-tab>
-                        <uib-tab index="3" heading="Blog" template-url="views/templates/tabTemplate.html"></uib-tab>
-                        <uib-tab index="4" heading="Services" template-url="views/templates/tabTemplate.html"></uib-tab>
-                        <uib-tab index="5" heading="Shop" template-url="views/templates/tabTemplate.html"></uib-tab>
-                        <uib-tab index="6" heading="About" template-url="views/templates/tabTemplate.html"></uib-tab>
-                        <uib-tab index="7" heading="Contact" template-url="views/templates/tabTemplate.html"></uib-tab>
-                        </uib-tabset>
+                <div class="navbar-bars-ico col-md-1 col-xs-2 col-md-offset-0">
+                        <i class="fa fa-bars inline hidden-md hidden-lg" type="button" aria-hidden="true" ng-click="isCollapsed = !isCollapsed"></i>
+                </div>
+            </div>
+        </div>
+        <div uib-collapse="isCollapsed" class="mobile-nav-list">
+            <ul class="list-unstyled">
+                <li>
+                    <div class="well well-lg"><a href>Home</a></div>
+                </li>
+                <li>
+                    <div class="well well-lg"><a href>Solution</a></div>
+                </li>
+                <li>
+                    <div class="well well-lg"><a href>Projects</a></div>
+                </li>
+                <li>
+                    <div class="well well-lg"><a href>Blog</a></div>
+                </li>
+                <li>
+                    <div class="well well-lg"><a href>Services</a></div>
+                </li>
+                <li>
+                    <div class="well well-lg"><a href>Shop</a></div>
+                </li>
+                <li>
+                    <div class="well well-lg"><a href>About</a></div>
+                </li>
+                <li>
+                    <div class="well well-lg"><a href>Contact</a></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="landing-carousel animated" when-visible="navBarIsVisible" when-not-visible="navBarIsNotVisible">
+        <div class="landing-navbar hidden-sm hidden-xs">
+            <div class="container">
+                <div>
+                    <div class="navbar-home-ico col-md-1 col-sm-2 col-xs-5">
+                        <i class="fa fa-home inline cursor" aria-hidden="true"></i>
+                        <i class="fa fa-bars inline hidden-md hidden-lg" aria-hidden="true"></i>
                     </div>
-                    <div class=" col-md-2 col-xs-12 right-tabs no-padding">
-                        <div class="pull-right">
+                    <div class="col-md-10 hidden-sm hidden-xs no-padding">
+                        <div class="col-md-10 middle-tabs no-padding">
                             <uib-tabset active="activeJustified" justified="true">
-                                <uib-tab index="8" heading="fa fa-twitter" template-url="views/templates/socialTabsTemplate.html"></uib-tab>
-                                <uib-tab index="9" heading="fa fa-facebook" template-url="views/templates/socialTabsTemplate.html"></uib-tab>
-                                <uib-tab index="10" heading="fa fa-gitlab" template-url="views/templates/socialTabsTemplate.html"></uib-tab>
-                                <uib-tab index="11" heading="fa fa-vk" template-url="views/templates/socialTabsTemplate.html"></uib-tab>
+                            <uib-tab index="0" heading="Home" template-url="views/templates/tabTemplate.html"></uib-tab>
+                            <uib-tab index="1" heading="Solution" template-url="views/templates/tabTemplate.html"></uib-tab>
+                            <uib-tab index="2" heading="Projects" template-url="views/templates/tabTemplate.html"></uib-tab>
+                            <uib-tab index="3" heading="Blog" template-url="views/templates/tabTemplate.html"></uib-tab>
+                            <uib-tab index="4" heading="Services" template-url="views/templates/tabTemplate.html"></uib-tab>
+                            <uib-tab index="5" heading="Shop" template-url="views/templates/tabTemplate.html"></uib-tab>
+                            <uib-tab index="6" heading="About" template-url="views/templates/tabTemplate.html"></uib-tab>
+                            <uib-tab index="7" heading="Contact" template-url="views/templates/tabTemplate.html"></uib-tab>
                             </uib-tabset>
                         </div>
-                    </div>
-                </div>
-                <div class="navbar-search-ico col-md-1 col-xs-6 col-xs-offset-1 col-sm-offset-4 col-md-offset-0">
-                    <i class="fa fa-search pointer" aria-hidden="true" ng-click="setVisibility()"></i>
-                    <span class="search-input"><input placeholder="Enter your search term..." ng-class="animate" /></span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="carousel-main">
-        <div>
-            <uib-carousel active="active" interval="myInterval" no-pause="true" template-url="views/templates/carouselTemplate.html">
-                <uib-slide class="landing-slide" ng-repeat="slide in slides track by slide.id" index="slide.id">
-                    <div class="slides" ng-style="{'background-image':'url({{slide.image[slide.id]}})'}"></div>
-                    <div class="carousel-caption container">
-                        <div class="col-xs-8 col-xs-offset-4">
-                            <h3 class="animated bounceInLeft">{{slide.headers}}</h3>
-                            <h1 class="animated {{slide.animation}}">{{slide.headers2}}</h1>
-                            <p class="animated jello">{{slide.text}}</p>
+                        <div class=" col-md-2 col-xs-12 right-tabs no-padding">
+                            <div class="pull-right">
+                                <uib-tabset active="activeJustified" justified="true">
+                                    <uib-tab index="8" heading="fa fa-twitter" template-url="views/templates/socialTabsTemplate.html"></uib-tab>
+                                    <uib-tab index="9" heading="fa fa-facebook" template-url="views/templates/socialTabsTemplate.html"></uib-tab>
+                                    <uib-tab index="10" heading="fa fa-gitlab" template-url="views/templates/socialTabsTemplate.html"></uib-tab>
+                                    <uib-tab index="11" heading="fa fa-vk" template-url="views/templates/socialTabsTemplate.html"></uib-tab>
+                                </uib-tabset>
+                            </div>
                         </div>
                     </div>
-                </uib-slide>
-            </uib-carousel>
-        </div>
-    </div>
-</div>
-<div class="container main">
-    <div class="col-sm-6 col-xs-12 left-text">
-        <p>Objectively innovate empowered manufactured products whereas parallel platforms.
-            Holisticly predominate extensible testing procedures for reliable supply chains.
-            Dramatically engage top-line web services <span class="request-text"><a href class="no-decoration">Request a quote</a></span>
-        </p>
-        <p>
-            We understand the importance of innovation and professionalism and work with the best people to achieve this.
-        </p>
-    </div>
-    <div class="col-sm-6 col-xs-12">
-        <div class="col-xs-12 chrome-info">
-            <div class="col-sm-4 col-xs-12 chrome-img"></div>
-            <div class="col-sm-8 col-xs-12">
-                <h4>Basic & Industrial Chemicals</h4>
-                <p>Globally incubate standards compliant channels scalable elits benefits.
-                    Quickly disseminate superior deliverables.
-                </p>
-                <a href class="href-slider">Read more</a>
+                    <div class="navbar-search-ico col-md-1 col-xs-6 col-xs-offset-1 col-sm-offset-4 col-md-offset-0">
+                        <i class="fa fa-search pointer" aria-hidden="true" ng-click="setVisibility()"></i>
+                        <span class="search-input"><input placeholder="Enter your search term..." ng-class="animate" /></span>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="col-xs-12 firefox-info">
-            <div class="col-sm-4 col-xs-12 firefox-img"></div>
-            <div class="col-sm-8 col-xs-12">
-                <h4>Basic & Industrial Chemicals</h4>
-                <p>Globally incubate standards compliant channels scalable elits benefits.
-                    Quickly disseminate superior deliverables.
-                </p>
-                <a href class="href-slider">Read more</a>
+        <div class="carousel-main">
+            <div>
+                <uib-carousel active="active" interval="myInterval" no-pause="true" template-url="views/templates/carouselTemplate.html">
+                    <uib-slide class="landing-slide" ng-repeat="slide in slides track by slide.id" index="slide.id">
+                        <div class="slides" ng-style="{'background-image':'url({{slide.image[slide.id]}})'}"></div>
+                        <div class="carousel-caption container">
+                            <div class="col-xs-8 col-xs-offset-4">
+                                <h3 class="animated bounceInLeft">{{slide.headers}}</h3>
+                                <h1 class="animated {{slide.animation}}">{{slide.headers2}}</h1>
+                                <p class="animated jello">{{slide.text}}</p>
+                            </div>
+                        </div>
+                    </uib-slide>
+                </uib-carousel>
             </div>
         </div>
     </div>
-</div>
-<div class="container introduct" >
-    <div class="col-md-4 col-sm-6 col-xs-12 introduct-block animated custom-hide"
-         ng-repeat="image in imageArray" when-visible="animateElementIn" when-not-visible="animateElementOut">
-        <div class="introduct-iamges" ng-style="{'background-image':'url({{image.background}})'}"></div>
-        <h3>{{image.header}}</h3>
-        <span>{{image.text}}</span>
+    <div class="container main">
+        <div class="col-sm-6 col-xs-12 left-text">
+            <p>Objectively innovate empowered manufactured products whereas parallel platforms.
+                Holisticly predominate extensible testing procedures for reliable supply chains.
+                Dramatically engage top-line web services <span class="request-text"><a href class="no-decoration">Request a quote</a></span>
+            </p>
+            <p>
+                We understand the importance of innovation and professionalism and work with the best people to achieve this.
+            </p>
+        </div>
+        <div class="col-sm-6 col-xs-12">
+            <div class="col-xs-12 chrome-info">
+                <div class="col-sm-4 col-xs-12 chrome-img"></div>
+                <div class="col-sm-8 col-xs-12">
+                    <h4>Basic & Industrial Chemicals</h4>
+                    <p>Globally incubate standards compliant channels scalable elits benefits.
+                        Quickly disseminate superior deliverables.
+                    </p>
+                    <a href class="href-slider">Read more</a>
+                </div>
+            </div>
+            <div class="col-xs-12 firefox-info">
+                <div class="col-sm-4 col-xs-12 firefox-img"></div>
+                <div class="col-sm-8 col-xs-12">
+                    <h4>Basic & Industrial Chemicals</h4>
+                    <p>Globally incubate standards compliant channels scalable elits benefits.
+                        Quickly disseminate superior deliverables.
+                    </p>
+                    <a href class="href-slider">Read more</a>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+    <div class="container introduct">
+        <div class="col-md-4 col-sm-6 col-xs-12 introduct-block animated custom-hide"
+             ng-repeat="image in imageArray" when-visible="animateElementIn" when-not-visible="animateElementOut">
+            <div class="introduct-iamges" ng-style="{'background-image':'url({{image.background}})'}"></div>
+            <h3>{{image.header}}</h3>
+            <span>{{image.text}}</span>
+        </div>
+    </div>
+    <div class="container-fluid portfolio animated custom-hide" when-visible="animateElementFromLeft" when-not-visible="animateElementOutToLeft">
+        <div class="container">
+            <div class="col-xs-4">
+                <h1>Image filter</h1>
+                <span>::::::::::::::::::::::::::::::::::::::::::::::::::::::::</span>
+            </div>
+            <div class="col-xs-8">
+                <ul class="list-inline image-filter">
+                    <li ng-repeat="link in links" class="pull-right" >
+                        <a href ng-click="findFilterProp(link)" ng-class="link.bxClass">{{link.name}}</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-12 portfolio-images">
+                <ul class="list-inline row">
+                    <li ng-repeat="color in colors" class="col-xs-12 col-md-3 animated {{color.bxClass}}">
+                        <div class="box" ng-style={{color.back}}></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>

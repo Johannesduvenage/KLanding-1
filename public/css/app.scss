@@ -8,7 +8,26 @@ body{
   font-family: $font;
 }
 .display-none{
-  display: none;
+  display: none!important;
+}
+.size-down{
+  transition-property: all;
+  transition-duration: 0.4s;
+  transition-timing-function: linear;
+  transform: scale(0);
+  width: 0;
+  padding: 0!important;
+  margin: 0!important;
+  visibility: hidden;
+}
+.size-up{
+  transition-property: all;
+  transition-duration: 0.4s;
+  transition-timing-function: linear;
+  transform: scale(1);
+  padding: auto;
+  margin: auto;
+  visibility: visible;
 }
 .custom-hide{
   visibility: hidden;
@@ -535,5 +554,50 @@ div.introduct{
     width: 100%;
   }
 }
-
+/*** Portfolio ***/
+div.portfolio {
+  margin-top: 50px;
+  padding-top: 65px;
+  padding-bottom: 100px;
+  background: #222;
+  color: #fff;
+  h1{
+    margin: 0;
+  }
+  span{
+    color: #6f6f6f;
+  }
+  ul li{
+    font-size: 14px;
+    margin-right: 22px;
+    padding: 0;
+    .active-img{
+      color: #f7c51d;
+      text-decoration: none;
+    }
+    a{
+      color: #fff;
+    }
+    a:hover, a:focus{
+      text-decoration: none;
+    }
+  }
+  ul.image-filter{
+    li:first-child{
+      margin: 0;
+    }
+  }
+  .portfolio-images{
+    margin-top: 50px;
+    ul li{
+      padding: 0 15px;
+      margin: 0;
+    }
+    div.box {
+      background-size: cover!important;
+      background-position: center!important;
+      height: 200px;
+    }
+  }
+}
 @import "responsive";

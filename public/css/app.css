@@ -5,7 +5,26 @@ body {
   font-family: "Roboto", sans-serif; }
 
 .display-none {
-  display: none; }
+  display: none !important; }
+
+.size-down {
+  transition-property: all;
+  transition-duration: 0.4s;
+  transition-timing-function: linear;
+  transform: scale(0);
+  width: 0;
+  padding: 0 !important;
+  margin: 0 !important;
+  visibility: hidden; }
+
+.size-up {
+  transition-property: all;
+  transition-duration: 0.4s;
+  transition-timing-function: linear;
+  transform: scale(1);
+  padding: auto;
+  margin: auto;
+  visibility: visible; }
 
 .custom-hide {
   visibility: hidden; }
@@ -413,6 +432,40 @@ div.introduct {
     height: 250px;
     width: 100%; }
 
+/*** Portfolio ***/
+div.portfolio {
+  margin-top: 50px;
+  padding-top: 65px;
+  padding-bottom: 100px;
+  background: #222;
+  color: #fff; }
+  div.portfolio h1 {
+    margin: 0; }
+  div.portfolio span {
+    color: #6f6f6f; }
+  div.portfolio ul li {
+    font-size: 14px;
+    margin-right: 22px;
+    padding: 0; }
+    div.portfolio ul li .active-img {
+      color: #f7c51d;
+      text-decoration: none; }
+    div.portfolio ul li a {
+      color: #fff; }
+    div.portfolio ul li a:hover, div.portfolio ul li a:focus {
+      text-decoration: none; }
+  div.portfolio ul.image-filter li:first-child {
+    margin: 0; }
+  div.portfolio .portfolio-images {
+    margin-top: 50px; }
+    div.portfolio .portfolio-images ul li {
+      padding: 0 15px;
+      margin: 0; }
+    div.portfolio .portfolio-images div.box {
+      background-size: cover !important;
+      background-position: center !important;
+      height: 200px; }
+
 @media screen and (max-width: 992px) {
   div.head div.push-me {
     background-color: #282828; }
@@ -481,6 +534,12 @@ div.introduct {
     margin-top: 50px; }
 
   div.carousel-caption h1 {
-    font-size: 24px; } }
+    font-size: 24px; }
+
+  ul.image-filter {
+    margin-top: 20px; }
+
+  div.portfolio-images ul li:not(:first-child) {
+    margin-top: 20px; } }
 
 /*# sourceMappingURL=app.css.map */
