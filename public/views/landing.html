@@ -43,10 +43,10 @@
     <div class="head container-fluid">
         <div class="container">
             <div class="top-header">
-                <div class="col-sm-6 col-xs-4">
+                <div class="col-sm-6 col-xs-12">
                     <span>This template created by Kiskin Vladislav</span>
                 </div>
-                <div class="col-sm-6 col-xs-8">
+                <div class="col-sm-6 col-xs-12">
                     <ul class="list-inline pull-right">
                         <li>
                             <span>Email us:</span><span class="author-email pointer"> kiskinvlad@gmail.com</span>
@@ -264,6 +264,53 @@
                         <div class="box" ng-style={{color.back}}></div>
                     </li>
                 </ul>
+            </div>
+        </div>
+    </div>
+    <div class="clinet-panel animated container-fluid custom-hide"  when-visible="animateElementFadeIn" when-not-visible="animateElementFadeOut">
+        <div class="container">
+            <div class="col-md-3 col-xs-12">
+                <h3>Client slider - carousel</h3>
+            </div>
+            <div class="col-md-9 col-xs-12">
+                <slick  infinite="true" speed="200" slides-to-show="5" touch-move="false" slides-to-scroll="1" autoplay="true">
+                   <div class="tech-img" ng-repeat="tech in technologies"  ng-style="{'background-image':'url({{tech.src}})'}"></div>
+                </slick>
+            </div>
+        </div>
+    </div>
+    <div class="quote-panel animated" when-visible="animateElementFadeIn" when-not-visible="animateElementFadeOut">
+        <div class="container">
+            <slick  infinite="true" speed="200" slides-to-show="3" touch-move="false" slides-to-scroll="1" autoplay="true" class="hidden-sm hidden-xs">
+                    <div class="quote-box" ng-repeat="qBox in qBoxes">
+                        <span class="inner-span"><i class="fa fa-quote-right" aria-hidden="true"></i></span>
+                        <h3 class="inner-header">{{qBox.header}}</h3>
+                        <p class="inner-paragraph">{{qBox.text}}</p>
+                        <div class="outer-part">
+                            <h3>{{qBox.author}}<span>{{qBox.post}}</span></h3>
+                            <ul class="list-inline">
+                                <li ng-repeat="rating in qBox.rating track by $index">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+            </slick>
+            <!--*** Mobile ***-->
+            <div class="row hidden-lg hidden-md">
+                <div class="quote-box col-sm-6 col-xs-12" ng-repeat="qBox in qBoxes">
+                    <span class="inner-span"><i class="fa fa-quote-right" aria-hidden="true"></i></span>
+                    <h3 class="inner-header">{{qBox.header}}</h3>
+                    <p class="inner-paragraph">{{qBox.text}}</p>
+                    <div class="outer-part container">
+                        <h3>{{qBox.author}}<span>{{qBox.post}}</span></h3>
+                        <ul class="list-inline">
+                            <li ng-repeat="rating in qBox.rating track by $index">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -2,6 +2,11 @@
   div.head div.push-me{
     background-color: #282828;
   }
+  div.head{
+    ul.list-inline{
+      float: left!important;
+    }
+  }
   div.landing-carousel{
     margin-top: 0;
   }
@@ -66,6 +71,27 @@
       }
     }
   }
+  ul.image-filter{
+    margin-top: 20px;
+  }
+  div.portfolio{
+    padding-bottom: 20px;
+  }
+  div.portfolio-images ul li:not(:first-child){
+    margin-top: 20px;
+  }
+  div.clinet-panel {
+    h3::after {
+      width: 0;
+    }
+    h3{
+      text-align: center;
+    }
+  }
+  div.quote-box{
+    margin-right: 0!important;
+    margin-top: 25px!important;
+  }
 }
 @media screen and (max-width: 768px) {
   div.main{
@@ -82,11 +108,5 @@
     h1{
       font-size: 24px;
     }
-  }
-  ul.image-filter{
-    margin-top: 20px;
-  }
- div.portfolio-images ul li:not(:first-child){
-    margin-top: 20px;
   }
 }

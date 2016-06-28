@@ -226,14 +226,82 @@ $scope.filters = { };
         });
     };
     $scope.animateElementFromLeft = function($el) {
-        $el.removeClass('custom-hide slideOutRight');
+        $el.removeClass('custom-hide fadeOut');
         $el.addClass('slideInLeft');
     };
 
     $scope.animateElementOutToLeft = function($el) {
-        $el.addClass('slideOutRight');
+        $el.addClass('fadeOut');
         $el.removeClass('custom-hide slideInLeft');
-    }
+    };
+    $scope.animateElementFadeIn = function($el) {
+        $el.removeClass('custom-hide fadeOut');
+        $el.addClass('fadeIn');
+    };
+    $scope.animateElementFadeOut= function($el) {
+        $el.addClass('fadeOut');
+        $el.removeClass('custom-hide fadeIn');
+    };
+    $scope.animateElementFromRight = function($el) {
+        $el.removeClass('custom-hide fadeOut');
+        $el.addClass('slideInRight');
+    };
+    $scope.animateElementOutToRight= function($el) {
+        $el.addClass('fadeOut');
+        $el.removeClass('custom-hide slideInRight');
+    };
+/*** Client panel ***/
+    $scope.technologies = [
+        {id: 0, name: 'intel', src: 'assets/intel-logo.png'},
+        {id: 1, name: 'amd', src: 'assets/amd-logo.png'},
+        {id: 2, name: 'radeon', src: 'assets/nvidia-logo.png'},
+        {id: 3, name: 'nvidia', src: 'assets/radeon-logo.png'},
+        {id: 4, name: 'seagate', src: 'assets/k-ico.png'},
+        {id: 5, name: 'intel', src: 'assets/intel-logo.png'},
+        {id: 6, name: 'amd', src: 'assets/amd-logo.png'},
+        {id: 7, name: 'radeon', src: 'assets/nvidia-logo.png'},
+        {id: 8, name: 'nvidia', src: 'assets/radeon-logo.png'},
+        {id: 9, name: 'seagate', src: 'assets/k-ico.png'}
+    ]
+/*** Quote panel ***/
+    $scope.getNumber = function(num) {
+        return new Array(num);
+    };
+    $scope.qBoxes = [
+        {
+            id: 0,
+            header: 'Hello dear friend',
+            text: 'Globally incubate standards compliant channels scalable elits benefits.Quickly disseminate superior deliverables',
+            author: 'Kiskin Vladislav',
+            post: 'Technician Engineer',
+            rating: $scope.getNumber(5)
+        },
+        {
+            id: 1,
+            header: 'Hello dear friend',
+            text: 'Globally incubate standards compliant channels scalable elits benefits.Quickly disseminate superior deliverables',
+            author: 'Kiskin Vladislav',
+            post: 'Technician Engineer',
+            rating: $scope.getNumber(4)
+        },
+        {
+            id: 2,
+            header: 'Hello dear friend',
+            text: 'Globally incubate standards compliant channels scalable elits benefits.Quickly disseminate superior deliverables',
+            author: 'Kiskin Vladislav',
+            post: 'Technician Engineer',
+            rating: $scope.getNumber(3)
+        },
+        {
+            id: 3,
+            header: 'Hello dear friend',
+            text: 'Globally incubate standards compliant channels scalable elits benefits.Quickly disseminate superior deliverables',
+            author: 'Kiskin Vladislav',
+            post: 'Technician Engineer',
+            rating: $scope.getNumber(2)
+        }
+    ];
+
 }
 AppCtrl.$inject=['$scope', '$window','$log','$animate'];
 
