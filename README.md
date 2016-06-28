@@ -23,6 +23,7 @@ Based on [jimakker/angular-express-bootstrap-seed](https://github.com/jimakker/a
 - Animate.css (https://daneden.github.io/animate.css/)
 - Jquery-2.0.3
 - angular-scroll-animate [rpocklin/angular-scroll-animate] (https://github.com/rpocklin/angular-scroll-animate)
+- angular-slick-carousel [vasyabigi/angular-slick] (https://github.com/vasyabigi/angular-slick)
 
 ## How to start
 1. Install node ([How to] (https://nodejs.org/en/download/package-manager/)).
