@@ -92,6 +92,16 @@
     margin-right: 0!important;
     margin-top: 25px!important;
   }
+  div.accordion-panel {
+    h1.news-header{
+      margin-top: 55px;
+    }
+    .news-block{
+      position: relative!important;
+      max-width: 100%!important;
+      margin-top: 30px!important;
+    }
+  }
 }
 @media screen and (max-width: 768px) {
   div.main{

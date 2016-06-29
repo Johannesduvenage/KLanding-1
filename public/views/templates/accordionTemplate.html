@@ -1,0 +1,10 @@
+<div class="panel accordion-toggle" ng-class="panelClass || 'panel-default'" data-toggle="collapse" href aria-expanded="{{isOpen}}" aria-controls="{{::panelId}}" tabindex="0" ng-click="toggleOpen()">
+    <div role="tab" id="{{::headingId}}" aria-selected="{{isOpen}}" class="panel-heading pointer" ng-keypress="toggleOpen($event)">
+        <h4 class="panel-title">
+            <span uib-accordion-transclude="heading"><span uib-accordion-header ng-class="{'text-muted': isDisabled}" class="accordion-head pointer">{{heading}}</span></span>
+        </h4>
+    </div>
+    <div id="{{::panelId}}" aria-labelledby="{{::headingId}}" aria-hidden="{{!isOpen}}" role="tabpanel" class="panel-collapse collapse" uib-collapse="!isOpen">
+        <div class="panel-body" ng-transclude></div>
+    </div>
+</div>

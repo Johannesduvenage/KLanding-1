@@ -314,4 +314,92 @@
             </div>
         </div>
     </div>
+    <div class="accordion-panel">
+        <div class="container">
+            <div class="col-md-6 col-xs-12 animated" when-visible="animateElementFromLeft" when-not-visible="animateElementOutToLeft">
+                <h1>Simple accordion panels</h1>
+                <span>::::::::::::::::::::::::::::::::::::::::::::::::::::::::</span>
+                <div class="accordeons">
+                    <uib-accordion close-others="oneAtATime">
+                        <uib-accordion-group is-open="status.isFirstOpen" template-url="views/templates/accordionTemplate.html">
+                            <uib-accordion-heading>
+                                First Accordion          <i class="pull-right fa" ng-class="{'fa-minus gold-text': status.isFirstOpen, 'fa-plus': !status.isFirstOpen}"></i>
+
+                            </uib-accordion-heading>
+                            <p class="accordion-body">
+                                This is just some content to illustrate fancy headings.
+                            </p>
+                        </uib-accordion-group>
+                        <uib-accordion-group is-open="status.isSecondOpen" template-url="views/templates/accordionTemplate.html">
+                            <uib-accordion-heading>
+                                Second  Accordion           <i class="pull-right fa" ng-class="{'fa-minus gold-text': status.isSecondOpen, 'fa-plus': !status.isSecondOpen}"></i>
+
+                            </uib-accordion-heading>
+                            <p class="accordion-body">
+                                This is just some content to illustrate fancy headings.
+                            </p>
+                        </uib-accordion-group>
+                        <uib-accordion-group is-open="status.isThirdOpen" template-url="views/templates/accordionTemplate.html">
+                            <uib-accordion-heading>
+                                Third  Accordion           <i class="pull-right fa" ng-class="{'fa-minus gold-text': status.isThirdOpen, 'fa-plus': !status.isThirdOpen}"></i>
+
+                            </uib-accordion-heading>
+                            <p class="accordion-body">
+                                This is just some content to illustrate fancy headings.
+                            </p>
+                        </uib-accordion-group>
+                    </uib-accordion>
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-12 animated" when-visible="animateElementFromRight" when-not-visible="animateElementOutToRight">
+                <h1 class="news-header">Latest news</h1>
+                <span>::::::::::::::::::::::::::::::::::::::::::::::::::::::::</span>
+                <article class="news-block hidden-xs hidden-sm">
+                    <div class="news-img">
+                        <img src="../assets/news1.jpg"/>
+                        <div class="news-text">
+                            <a href class="header-link" title="Help Your Business to Success"><h3>Help Your Business to Success</h3></a>
+                            <span>June 29, 2016 /</span><span class="gold-text"> Publisher General</span>
+                            <p>We aim to eliminate the task of dividing and project different architectures[...]</p>
+                            <a href class="read-more-link" title="Read more">Read more<span class="read-more-arrow"></span></a>
+                        </div>
+                    </div>
+                </article>
+                <article class="news-block hidden-xs hidden-sm" style="top: 300px">
+                    <div class="news-img">
+                        <img src="../assets/news2.jpg"/>
+                        <div class="news-text">
+                            <a href class="header-link" title="Help Your Business to Success"><h3>Help Your Business to Success</h3></a>
+                            <span>June 29, 2016 /</span><span class="gold-text"> Publisher General</span>
+                            <p>We aim to eliminate the task of dividingaw</p>
+                            <a href class="read-more-link" title="Read more">Read more<span class="read-more-arrow"></span></a>
+                        </div>
+                    </div>
+                </article>
+                <!-- ***Mobile*** -->
+                <article class="news-block  mobile-news  row hidden-md hidden-lg">
+                    <div class="col-xs-12">
+                        <img src="../assets/news1.jpg"/>
+                    </div>
+                    <div class="col-xs-12 news-text">
+                        <a href class="header-link" title="Help Your Business to Success"><h3>Help Your Business to Success</h3></a>
+                        <span>June 29, 2016 /</span><span class="gold-text"> Publisher General</span>
+                        <p>We aim to eliminate the task of dividing and project different architectures[...]</p>
+                        <a href class="read-more-link" title="Read more">Read more<span class="read-more-arrow"></span></a>
+                    </div>
+                </article>
+                <article class="news-block  mobile-news  row hidden-md hidden-lg">
+                    <div class="col-xs-12">
+                        <img src="../assets/news2.jpg"/>
+                    </div>
+                    <div class="col-xs-12 news-text">
+                        <a href class="header-link" title="Help Your Business to Success"><h3>Help Your Business to Success</h3></a>
+                        <span>June 29, 2016 /</span><span class="gold-text"> Publisher General</span>
+                        <p>We aim to eliminate the task of dividing and project different architectures[...]</p>
+                        <a href class="read-more-link" title="Read more">Read more<span class="read-more-arrow"></span></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
 </div>

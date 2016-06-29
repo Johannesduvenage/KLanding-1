@@ -301,7 +301,13 @@ $scope.filters = { };
             rating: $scope.getNumber(2)
         }
     ];
-
+/*** Accordion panel controller ***/
+$scope.oneAtATime = true;
+$scope.status = {
+    isSecondOpen: false,
+    isFirstOpen: false,
+    isThirdOpen: false
+};
 }
 AppCtrl.$inject=['$scope', '$window','$log','$animate'];
 

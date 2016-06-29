@@ -64,6 +64,9 @@ body {
 .inline {
   float: left; }
 
+.gold-text {
+  color: #f7c51d; }
+
 /*** Landing Header ***/
 header.header {
   margin: 0;
@@ -560,6 +563,112 @@ div.quote-panel {
     border-top: 25px solid #f7c51d;
     border-left: 30px solid transparent; }
 
+/*** acordions panel ***/
+div.accordion-panel {
+  /*** acordions block ***/
+  margin: 50px 0;
+  /***News Block***/ }
+  div.accordion-panel .accordeons {
+    margin-top: 30px; }
+  div.accordion-panel .panel-group .panel + .panel {
+    margin-top: 20px; }
+  div.accordion-panel div.tablist:focus {
+    outline: none; }
+  div.accordion-panel div.panel-heading {
+    background-color: #fff; }
+  div.accordion-panel div.panel-group {
+    border-radius: 0; }
+  div.accordion-panel div.panel-group .panel-heading + .panel-collapse .panel-body {
+    border-top: 0;
+    padding: 0 30px;
+    font-size: 15px;
+    color: #777;
+    line-height: 26px;
+    letter-spacing: 0.45px;
+    font-weight: 400; }
+    div.accordion-panel div.panel-group .panel-heading + .panel-collapse .panel-body p {
+      padding: 20px 0;
+      margin: 0; }
+  div.accordion-panel .accordion-head {
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0.15px;
+    text-transform: capitalize; }
+    div.accordion-panel .accordion-head i {
+      font-size: 7px;
+      margin-top: 6px; }
+  div.accordion-panel h4.panel-title {
+    margin: 10px 0;
+    padding: 0 20px; }
+  div.accordion-panel .accordion-toggle:focus {
+    outline: none; }
+  div.accordion-panel .accordion-body {
+    border-top: 1px solid #ddd; }
+  div.accordion-panel article.news-block {
+    margin-top: 30px;
+    position: absolute;
+    max-width: 50%; }
+    div.accordion-panel article.news-block img {
+      width: 250px;
+      height: 160px; }
+    div.accordion-panel article.news-block .news-img {
+      float: left; }
+    div.accordion-panel article.news-block .news-text {
+      position: relative;
+      top: -155px;
+      left: 270px; }
+      div.accordion-panel article.news-block .news-text .header-link h3 {
+        -webkit-transition: color 1s ease;
+        -moz-transition: color 1s ease;
+        transition: color 1s ease;
+        color: #222; }
+      div.accordion-panel article.news-block .news-text .header-link h3:hover {
+        color: #f7c51d; }
+      div.accordion-panel article.news-block .news-text a.header-link {
+        text-decoration: none; }
+      div.accordion-panel article.news-block .news-text a.read-more-link {
+        text-decoration: none;
+        text-transform: capitalize;
+        line-height: 25px;
+        font-size: 14px;
+        letter-spacing: 0.42px;
+        color: #222;
+        -webkit-transition: color 0.5s ease;
+        -moz-transition: color 0.5s ease;
+        transition: color 0.5s ease; }
+      div.accordion-panel article.news-block .news-text span.read-more-arrow {
+        margin-left: 0;
+        font-size: 18px;
+        position: relative;
+        transition: all 0.5s ease 0s;
+        -webkit-transition: all 0.5s ease 0s;
+        -moz-transition: all 0.5s ease 0s;
+        -o-transition: all 0.5s ease 0s;
+        opacity: 0; }
+      div.accordion-panel article.news-block .news-text span.read-more-arrow:before {
+        content: "\2192"; }
+      div.accordion-panel article.news-block .news-text a.read-more-link:hover {
+        color: #f7c51d; }
+        div.accordion-panel article.news-block .news-text a.read-more-link:hover .read-more-arrow {
+          opacity: 1;
+          margin-left: 10px; }
+      div.accordion-panel article.news-block .news-text p {
+        margin-top: 10px;
+        color: #777;
+        font-size: 15px;
+        line-height: 22px; }
+      div.accordion-panel article.news-block .news-text h3 {
+        font-size: 17px;
+        color: #222;
+        line-height: 26px;
+        letter-spacing: 0.17px;
+        margin: 5px 0 2px;
+        font-weight: 400;
+        text-transform: capitalize; }
+  div.accordion-panel article.mobile-news .news-text {
+    top: 0;
+    left: 0; }
+
 @media screen and (max-width: 992px) {
   div.head div.push-me {
     background-color: #282828; }
@@ -636,7 +745,14 @@ div.quote-panel {
 
   div.quote-box {
     margin-right: 0 !important;
-    margin-top: 25px !important; } }
+    margin-top: 25px !important; }
+
+  div.accordion-panel h1.news-header {
+    margin-top: 55px; }
+  div.accordion-panel .news-block {
+    position: relative !important;
+    max-width: 100% !important;
+    margin-top: 30px !important; } }
 @media screen and (max-width: 768px) {
   div.main {
     margin-top: 50px; }
