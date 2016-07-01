@@ -17,5 +17,9 @@
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",
     "serve-favicon": "^2.3.0"
+  },
+  "engines": {
+    "node": "5.4.1",
+    "npm": "3.3.12"
   }
 }
