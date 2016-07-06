@@ -32,6 +32,8 @@ Based on [jimakker/angular-express-bootstrap-seed](https://github.com/jimakker/a
 5. Go to localhost:3000
 6. For Dev - Install sass ([How to] (http://sass-lang.com/install)).
  
-##ToDo
+## You can look web-site here
+http://klanding.herokuapp.com/landing
+## ToDo
 
 In work
