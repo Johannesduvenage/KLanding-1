@@ -47,11 +47,11 @@ function AppCtrl($scope, $window, $log, $animate) {
     $scope.addSlide = function() {
         slides.push({
             image: ['assets/IT-1.jpg','assets/IT-2.jpg','assets/IT-3.jpg'],
-            headers: ['Logic IT Solutions','Logic IT Solutions'][slides.length % 3],
-            headers2: ['Logic IT Solutions can cope with different parts of the workflow','Created by Kiskin', 'Email us'][slides.length % 3],
-            text: ['The main values of LITS are dynamic growth and rock solid reputation as business partner.',
-                'The main values of LITS are dynamic growth and rock solid reputation as business partner',
-                'The main values of LITS are dynamic growth and rock solid reputation as business partner']
+            headers: ['Web development','Desktop development'][slides.length % 3],
+            headers2: ['MEAN stack','Create apps with Python', 'Created by Kiskin Vlad'][slides.length % 3],
+            text: ['This is AngularJs plus MongoDB plus Express plus NodeJs plus fun!',
+                'Like Qt? - Try PyQt. Don\'t like Qt? - Use Kivy.',
+                'Using AngularJs, Express and Bootstrap 3']
                 [slides.length % 3],
             animation: ['bounceInRight', 'fadeInDown', 'bounceInDown'][slides.length % 3],
             id: currIndex++
@@ -157,16 +157,16 @@ $scope.isCollapsed = true;
 /*** Introduct controller ***/
 $scope.imageArray = [{id: 0,
     background: 'assets/it1_400x300.jpg',
-    header: 'Agricultural Processing',
-    text: 'Objectively innovate empowered'},
+    header: 'Code',
+    text: 'Write once run anywhere'},
     {id: 1,
         background: 'assets/it2_400x300.jpg',
-        header: 'Machinery & Tools ',
-        text: 'Objectively innovate empowered'},
+        header: 'Tools',
+        text: 'Biggest community'},
     {id: 2,
         background: 'assets/it3_400x300.jpg',
-        header: 'Coal & Solid Fuels',
-        text: 'Objectively innovate empowered'}
+        header: 'Frameworks',
+        text: 'Supporting structure around which something can be built'}
 ];
     $scope.animateElementIn = function($el) {
         $el.removeClass('custom-hide fadeOut');
@@ -195,7 +195,7 @@ $scope.filters = { };
 
     ];
     $scope.findFilterProp = function(link){
-        $scope.links.map((el) => {
+        $scope.links.forEach(function(el)  {
            if(el!== link) {
                el.bxClass = '';
            }
@@ -204,15 +204,15 @@ $scope.filters = { };
            }
         });
         if(link.prop === '') {
-            $scope.colors.map((color) => {
+            $scope.colors.forEach(function(color) {
                 color.bxClass = 'fadeIn';
             });
             return;
         }
         $scope.colorsOut = [];
-        $scope.colors.map((color) => {
+        $scope.colors.forEach(function(color) {
             var check = false;
-            color.props.map((prop) => {
+            color.props.forEach(function(prop) {
                 if(prop===link.prop){
                     color.bxClass = 'fadeIn size-up';
                     check = true;
@@ -270,34 +270,34 @@ $scope.filters = { };
     $scope.qBoxes = [
         {
             id: 0,
-            header: 'Hello dear friend',
-            text: 'Globally incubate standards compliant channels scalable elits benefits.Quickly disseminate superior deliverables',
-            author: 'Kiskin Vladislav',
-            post: 'Technician Engineer',
+            header: 'Angular 5',
+            text: 'Create scalable front-end applications with angularJs',
+            author: 'Kiskin Vladyslav',
+            post: 'Front-end developer',
             rating: $scope.getNumber(5)
         },
         {
             id: 1,
-            header: 'Hello dear friend',
-            text: 'Globally incubate standards compliant channels scalable elits benefits.Quickly disseminate superior deliverables',
-            author: 'Kiskin Vladislav',
-            post: 'Technician Engineer',
+            header: 'NodeJs',
+            text: 'Building neural networks, chat bots, web servers with Express',
+            author: 'Kiskin Vladyslav',
+            post: 'Back-end developer',
             rating: $scope.getNumber(4)
         },
         {
             id: 2,
-            header: 'Hello dear friend',
-            text: 'Globally incubate standards compliant channels scalable elits benefits.Quickly disseminate superior deliverables',
-            author: 'Kiskin Vladislav',
-            post: 'Technician Engineer',
+            header: 'Bootstrap 3',
+            text: 'Build response, mobile-first sites and UI with HTML5 and CSS3',
+            author: 'Kiskin Vladyslav',
+            post: 'Web developer',
             rating: $scope.getNumber(3)
         },
         {
             id: 3,
-            header: 'Hello dear friend',
-            text: 'Globally incubate standards compliant channels scalable elits benefits.Quickly disseminate superior deliverables',
-            author: 'Kiskin Vladislav',
-            post: 'Technician Engineer',
+            header: 'Python',
+            text: 'Create desktop applications with Kivy or PyQt and servers with Django',
+            author: 'Kiskin Vladyslav',
+            post: 'Software engineer',
             rating: $scope.getNumber(2)
         }
     ];
