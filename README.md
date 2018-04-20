@@ -19,5 +19,5 @@ Based on [jimakker/angular-express-bootstrap-seed](https://github.com/jimakker/a
 6. Open in browser * [localhost:3000](http://localhost:3000)
  
 ## You can look web-site here
-http://klanding.herokuapp.com/landing
+https://klanding-angularjs.herokuapp.com
 
