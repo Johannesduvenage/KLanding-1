@@ -21,3 +21,9 @@ Based on [jimakker/angular-express-bootstrap-seed](https://github.com/jimakker/a
 ## You can look web-site here
 https://klanding-angularjs.herokuapp.com
 
+## License
+
+[MIT](LICENSE.md) &copy; [Kiskin Vladislav][author]
+
+
+[author]: https://github.com/kiskinvlad
